@@ -27,61 +27,76 @@ public class F_MEDICAMENT extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLabelCodeMedicaments = new javax.swing.JLabel();
+        jLabelNomCommercialMedicaments = new javax.swing.JLabel();
+        jLabelFamilleMedicaments = new javax.swing.JLabel();
+        jLabelCompositionMedicaments = new javax.swing.JLabel();
+        jLabelEffetsIndésirablesMedicaments = new javax.swing.JLabel();
+        jLabelContreIndicationMedicaments = new javax.swing.JLabel();
+        jLabelPrixEchantillonsMedicaments = new javax.swing.JLabel();
         jTextFieldTitre = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jComboBoxFamille = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jTextFieldCodeMedicaments = new javax.swing.JTextField();
+        jTextFieldNomCommercialMedicaments = new javax.swing.JTextField();
+        jTextFieldCompositionMedicaments = new javax.swing.JTextField();
+        jTextFieldEffetsIndesirablesMedicaments = new javax.swing.JTextField();
+        jTextFieldContreIndicationsMedicaments = new javax.swing.JTextField();
+        jTextFieldPrixEchantillonsMedicaments = new javax.swing.JTextField();
+        jComboBoxFamilleMedicaments = new javax.swing.JComboBox<>();
+        jButtonPrécédentMedicaments = new javax.swing.JButton();
+        jButtonSuivantMedicaments = new javax.swing.JButton();
+        jButtonFermerMedicaments = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().setLayout(null);
 
-        jLabel1.setText("Code");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(22, 60, 25, 14);
+        jLabelCodeMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelCodeMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelCodeMedicaments.setText("Code");
+        getContentPane().add(jLabelCodeMedicaments);
+        jLabelCodeMedicaments.setBounds(22, 60, 60, 15);
 
-        jLabel2.setText("Nom commercial");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(22, 98, 76, 14);
+        jLabelNomCommercialMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelNomCommercialMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelNomCommercialMedicaments.setText("Nom commercial");
+        getContentPane().add(jLabelNomCommercialMedicaments);
+        jLabelNomCommercialMedicaments.setBounds(22, 98, 100, 15);
 
-        jLabel3.setText("Famille");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(22, 138, 32, 14);
+        jLabelFamilleMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelFamilleMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelFamilleMedicaments.setText("Famille");
+        getContentPane().add(jLabelFamilleMedicaments);
+        jLabelFamilleMedicaments.setBounds(22, 138, 70, 15);
 
-        jLabel4.setText("Composition");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(22, 176, 58, 14);
+        jLabelCompositionMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelCompositionMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelCompositionMedicaments.setText("Composition");
+        getContentPane().add(jLabelCompositionMedicaments);
+        jLabelCompositionMedicaments.setBounds(22, 176, 100, 15);
 
-        jLabel5.setText("Effets indésirables");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(22, 223, 88, 14);
+        jLabelEffetsIndésirablesMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelEffetsIndésirablesMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelEffetsIndésirablesMedicaments.setText("Effets indésirables");
+        getContentPane().add(jLabelEffetsIndésirablesMedicaments);
+        jLabelEffetsIndésirablesMedicaments.setBounds(20, 230, 130, 40);
 
-        jLabel6.setText("Contre Indications");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(22, 285, 88, 14);
+        jLabelContreIndicationMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelContreIndicationMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelContreIndicationMedicaments.setText("Contre Indications");
+        getContentPane().add(jLabelContreIndicationMedicaments);
+        jLabelContreIndicationMedicaments.setBounds(20, 350, 120, 15);
 
-        jLabel7.setText("Prix Echantillons");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(22, 357, 77, 14);
+        jLabelPrixEchantillonsMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelPrixEchantillonsMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelPrixEchantillonsMedicaments.setText("Prix Echantillons");
+        getContentPane().add(jLabelPrixEchantillonsMedicaments);
+        jLabelPrixEchantillonsMedicaments.setBounds(20, 410, 100, 15);
 
         jTextFieldTitre.setEditable(false);
         jTextFieldTitre.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFieldTitre.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jTextFieldTitre.setForeground(new java.awt.Color(51, 51, 153));
         jTextFieldTitre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldTitre.setText("MEDICAMENTS");
         jTextFieldTitre.addActionListener(new java.awt.event.ActionListener() {
@@ -90,52 +105,54 @@ public class F_MEDICAMENT extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldTitre);
-        jTextFieldTitre.setBounds(22, 19, 595, 20);
+        jTextFieldTitre.setBounds(22, 19, 720, 28);
 
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(128, 57, 140, 20);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(128, 95, 140, 20);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(128, 173, 463, 20);
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(128, 223, 463, 42);
-        getContentPane().add(jTextField6);
-        jTextField6.setBounds(128, 291, 463, 49);
+        jTextFieldCodeMedicaments.setEditable(false);
+        jTextFieldCodeMedicaments.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jTextFieldCodeMedicaments);
+        jTextFieldCodeMedicaments.setBounds(160, 60, 140, 20);
+        getContentPane().add(jTextFieldNomCommercialMedicaments);
+        jTextFieldNomCommercialMedicaments.setBounds(160, 100, 140, 20);
+        getContentPane().add(jTextFieldCompositionMedicaments);
+        jTextFieldCompositionMedicaments.setBounds(160, 170, 463, 20);
+        getContentPane().add(jTextFieldEffetsIndesirablesMedicaments);
+        jTextFieldEffetsIndesirablesMedicaments.setBounds(160, 230, 460, 80);
+        getContentPane().add(jTextFieldContreIndicationsMedicaments);
+        jTextFieldContreIndicationsMedicaments.setBounds(160, 340, 463, 49);
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldPrixEchantillonsMedicaments.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                jTextFieldPrixEchantillonsMedicamentsActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(128, 358, 59, 20);
+        getContentPane().add(jTextFieldPrixEchantillonsMedicaments);
+        jTextFieldPrixEchantillonsMedicaments.setBounds(160, 410, 59, 20);
 
-        jComboBoxFamille.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBoxFamille);
-        jComboBoxFamille.setBounds(128, 135, 56, 20);
+        jComboBoxFamilleMedicaments.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBoxFamilleMedicaments);
+        jComboBoxFamilleMedicaments.setBounds(160, 140, 56, 20);
 
-        jButton1.setText("Précédent");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(90, 396, 81, 23);
+        jButtonPrécédentMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonPrécédentMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonPrécédentMedicaments.setText("Précédent");
+        getContentPane().add(jButtonPrécédentMedicaments);
+        jButtonPrécédentMedicaments.setBounds(80, 460, 100, 23);
 
-        jButton2.setText("Suivant");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(189, 396, 69, 23);
+        jButtonSuivantMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonSuivantMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonSuivantMedicaments.setText("Suivant");
+        getContentPane().add(jButtonSuivantMedicaments);
+        jButtonSuivantMedicaments.setBounds(190, 460, 80, 23);
 
-        jButton3.setText("Fermer");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(507, 396, 67, 23);
+        jButtonFermerMedicaments.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonFermerMedicaments.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonFermerMedicaments.setText("Fermer");
+        getContentPane().add(jButtonFermerMedicaments);
+        jButtonFermerMedicaments.setBounds(637, 460, 80, 23);
 
-        jLabel8.setText("bfgb");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(480, 80, 90, 50);
-
-        jLabel9.setText("jLabel9");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(510, 130, 34, 14);
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\fchevalier\\Desktop\\gsb_logo.png")); // NOI18N
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(-20, -20, 820, 540);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -144,9 +161,9 @@ public class F_MEDICAMENT extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldTitreActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jTextFieldPrixEchantillonsMedicamentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrixEchantillonsMedicamentsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jTextFieldPrixEchantillonsMedicamentsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,25 +202,24 @@ public class F_MEDICAMENT extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBoxFamille;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JButton jButtonFermerMedicaments;
+    private javax.swing.JButton jButtonPrécédentMedicaments;
+    private javax.swing.JButton jButtonSuivantMedicaments;
+    private javax.swing.JComboBox<String> jComboBoxFamilleMedicaments;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabelCodeMedicaments;
+    private javax.swing.JLabel jLabelCompositionMedicaments;
+    private javax.swing.JLabel jLabelContreIndicationMedicaments;
+    private javax.swing.JLabel jLabelEffetsIndésirablesMedicaments;
+    private javax.swing.JLabel jLabelFamilleMedicaments;
+    private javax.swing.JLabel jLabelNomCommercialMedicaments;
+    private javax.swing.JLabel jLabelPrixEchantillonsMedicaments;
+    private javax.swing.JTextField jTextFieldCodeMedicaments;
+    private javax.swing.JTextField jTextFieldCompositionMedicaments;
+    private javax.swing.JTextField jTextFieldContreIndicationsMedicaments;
+    private javax.swing.JTextField jTextFieldEffetsIndesirablesMedicaments;
+    private javax.swing.JTextField jTextFieldNomCommercialMedicaments;
+    private javax.swing.JTextField jTextFieldPrixEchantillonsMedicaments;
     private javax.swing.JTextField jTextFieldTitre;
     // End of variables declaration//GEN-END:variables
 }
