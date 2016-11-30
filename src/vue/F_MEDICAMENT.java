@@ -46,6 +46,7 @@ public class F_MEDICAMENT extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -132,6 +133,10 @@ public class F_MEDICAMENT extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(480, 80, 90, 50);
 
+        jLabel9.setText("jLabel9");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(510, 130, 34, 14);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -192,6 +197,7 @@ public class F_MEDICAMENT extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
