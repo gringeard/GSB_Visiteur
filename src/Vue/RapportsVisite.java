@@ -31,13 +31,14 @@ public class RapportsVisite extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBoxTableau = new javax.swing.JComboBox();
         jTextFieldTitreRapportVisite = new javax.swing.JTextField();
         jLabelRapportsVisiteNumeroRapport = new javax.swing.JLabel();
         jLabelRapportsVisitePraticien = new javax.swing.JLabel();
         jLabelRapportsVisiteDateRapport = new javax.swing.JLabel();
         jLabelRapportsVisiteMotifVisite = new javax.swing.JLabel();
         jLabelRapportsVisiteBilan = new javax.swing.JLabel();
-        jComboBoxRapportsVisitePraticien = new javax.swing.JComboBox<>();
+        jComboBoxRapportsVisitePraticien = new javax.swing.JComboBox<String>();
         jButtonRapportsVisiteDetails = new javax.swing.JButton();
         jTextFieldRapportsVisiteDateRapport = new javax.swing.JTextField();
         jTextFieldRapportsVisiteMotifVisite = new javax.swing.JTextField();
@@ -47,97 +48,109 @@ public class RapportsVisite extends javax.swing.JFrame {
         jButtonRapportsVisiteNouveau = new javax.swing.JButton();
         jTextFieldRapportsVisiteNumeroRapport = new javax.swing.JTextField();
         jButtonRapportsVisiteFermer = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jLabelRapportsVisiteLogo = new javax.swing.JLabel();
 
+        jComboBoxTableau.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextFieldTitreRapportVisite.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jTextFieldTitreRapportVisite.setForeground(new java.awt.Color(51, 51, 153));
         jTextFieldTitreRapportVisite.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldTitreRapportVisite.setText("RAPPORTS DE VISITE");
-        getContentPane().add(jTextFieldTitreRapportVisite);
-        jTextFieldTitreRapportVisite.setBounds(10, 11, 570, 28);
+        getContentPane().add(jTextFieldTitreRapportVisite, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 570, -1));
 
         jLabelRapportsVisiteNumeroRapport.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelRapportsVisiteNumeroRapport.setForeground(new java.awt.Color(160, 160, 160));
         jLabelRapportsVisiteNumeroRapport.setText("NumeroRapport");
-        getContentPane().add(jLabelRapportsVisiteNumeroRapport);
-        jLabelRapportsVisiteNumeroRapport.setBounds(10, 50, 98, 15);
+        getContentPane().add(jLabelRapportsVisiteNumeroRapport, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         jLabelRapportsVisitePraticien.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelRapportsVisitePraticien.setForeground(new java.awt.Color(51, 51, 153));
         jLabelRapportsVisitePraticien.setText("Praticien");
-        getContentPane().add(jLabelRapportsVisitePraticien);
-        jLabelRapportsVisitePraticien.setBounds(10, 79, 53, 15);
+        getContentPane().add(jLabelRapportsVisitePraticien, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 79, -1, -1));
 
         jLabelRapportsVisiteDateRapport.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelRapportsVisiteDateRapport.setForeground(new java.awt.Color(51, 51, 153));
         jLabelRapportsVisiteDateRapport.setText("Date Rapport");
-        getContentPane().add(jLabelRapportsVisiteDateRapport);
-        jLabelRapportsVisiteDateRapport.setBounds(10, 118, 84, 15);
+        getContentPane().add(jLabelRapportsVisiteDateRapport, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 118, -1, -1));
 
         jLabelRapportsVisiteMotifVisite.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelRapportsVisiteMotifVisite.setForeground(new java.awt.Color(51, 51, 153));
         jLabelRapportsVisiteMotifVisite.setText("Motif Visite");
-        getContentPane().add(jLabelRapportsVisiteMotifVisite);
-        jLabelRapportsVisiteMotifVisite.setBounds(10, 152, 70, 15);
+        getContentPane().add(jLabelRapportsVisiteMotifVisite, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 152, -1, -1));
 
         jLabelRapportsVisiteBilan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelRapportsVisiteBilan.setForeground(new java.awt.Color(51, 51, 153));
         jLabelRapportsVisiteBilan.setText("BILAN");
-        getContentPane().add(jLabelRapportsVisiteBilan);
-        jLabelRapportsVisiteBilan.setBounds(10, 210, 37, 15);
+        getContentPane().add(jLabelRapportsVisiteBilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
-        jComboBoxRapportsVisitePraticien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBoxRapportsVisitePraticien);
-        jComboBoxRapportsVisitePraticien.setBounds(121, 77, 150, 20);
+        jComboBoxRapportsVisitePraticien.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBoxRapportsVisitePraticien, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 77, 150, -1));
 
         jButtonRapportsVisiteDetails.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButtonRapportsVisiteDetails.setForeground(new java.awt.Color(51, 51, 153));
         jButtonRapportsVisiteDetails.setText("Détails");
-        getContentPane().add(jButtonRapportsVisiteDetails);
-        jButtonRapportsVisiteDetails.setBounds(289, 77, 67, 21);
-        getContentPane().add(jTextFieldRapportsVisiteDateRapport);
-        jTextFieldRapportsVisiteDateRapport.setBounds(121, 116, 75, 20);
-        getContentPane().add(jTextFieldRapportsVisiteMotifVisite);
-        jTextFieldRapportsVisiteMotifVisite.setBounds(121, 150, 150, 20);
-        getContentPane().add(jTextFieldRapportsVisiteBilan);
-        jTextFieldRapportsVisiteBilan.setBounds(121, 193, 174, 83);
+        getContentPane().add(jButtonRapportsVisiteDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 77, -1, -1));
+        getContentPane().add(jTextFieldRapportsVisiteDateRapport, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 116, 75, -1));
+        getContentPane().add(jTextFieldRapportsVisiteMotifVisite, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 150, 150, -1));
+        getContentPane().add(jTextFieldRapportsVisiteBilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 193, 174, 83));
 
         jButtonRapportsVisitePrécédent.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonRapportsVisitePrécédent.setForeground(new java.awt.Color(51, 51, 153));
         jButtonRapportsVisitePrécédent.setText("Précédent");
-        getContentPane().add(jButtonRapportsVisitePrécédent);
-        jButtonRapportsVisitePrécédent.setBounds(70, 350, 95, 23);
+        getContentPane().add(jButtonRapportsVisitePrécédent, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
 
         jButtonRapportsVisiteSuivant.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonRapportsVisiteSuivant.setForeground(new java.awt.Color(51, 51, 153));
         jButtonRapportsVisiteSuivant.setText("Suivant");
-        getContentPane().add(jButtonRapportsVisiteSuivant);
-        jButtonRapportsVisiteSuivant.setBounds(170, 350, 79, 23);
+        getContentPane().add(jButtonRapportsVisiteSuivant, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, -1));
 
         jButtonRapportsVisiteNouveau.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonRapportsVisiteNouveau.setForeground(new java.awt.Color(51, 51, 153));
         jButtonRapportsVisiteNouveau.setText("Nouveau");
-        getContentPane().add(jButtonRapportsVisiteNouveau);
-        jButtonRapportsVisiteNouveau.setBounds(260, 350, 85, 23);
+        getContentPane().add(jButtonRapportsVisiteNouveau, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
 
         jTextFieldRapportsVisiteNumeroRapport.setEditable(false);
         jTextFieldRapportsVisiteNumeroRapport.setForeground(new java.awt.Color(160, 160, 160));
         jTextFieldRapportsVisiteNumeroRapport.setText("(NuméroAuto)");
-        getContentPane().add(jTextFieldRapportsVisiteNumeroRapport);
-        jTextFieldRapportsVisiteNumeroRapport.setBounds(120, 50, 74, 20);
+        getContentPane().add(jTextFieldRapportsVisiteNumeroRapport, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
 
         jButtonRapportsVisiteFermer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonRapportsVisiteFermer.setForeground(new java.awt.Color(51, 51, 153));
         jButtonRapportsVisiteFermer.setText("Fermer");
-        getContentPane().add(jButtonRapportsVisiteFermer);
-        jButtonRapportsVisiteFermer.setBounds(500, 350, 73, 23);
+        getContentPane().add(jButtonRapportsVisiteFermer, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, -1, -1));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Médicaments", "Nb. Echantillons"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTable2);
+        if (jTable2.getColumnModel().getColumnCount() > 0) {
+            jTable2.getColumnModel().getColumn(0).setCellEditor(null);
+        }
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 310, 70));
 
         jLabelRapportsVisiteLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gh,hgfb.png"))); // NOI18N
-        getContentPane().add(jLabelRapportsVisiteLogo);
-        jLabelRapportsVisiteLogo.setBounds(0, -20, 630, 410);
+        getContentPane().add(jLabelRapportsVisiteLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -230,12 +243,15 @@ public class RapportsVisite extends javax.swing.JFrame {
     private javax.swing.JButton jButtonRapportsVisitePrécédent;
     private javax.swing.JButton jButtonRapportsVisiteSuivant;
     private javax.swing.JComboBox<String> jComboBoxRapportsVisitePraticien;
+    private javax.swing.JComboBox jComboBoxTableau;
     private javax.swing.JLabel jLabelRapportsVisiteBilan;
     private javax.swing.JLabel jLabelRapportsVisiteDateRapport;
     private javax.swing.JLabel jLabelRapportsVisiteLogo;
     private javax.swing.JLabel jLabelRapportsVisiteMotifVisite;
     private javax.swing.JLabel jLabelRapportsVisiteNumeroRapport;
     private javax.swing.JLabel jLabelRapportsVisitePraticien;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextFieldRapportsVisiteBilan;
     private javax.swing.JTextField jTextFieldRapportsVisiteDateRapport;
     private javax.swing.JTextField jTextFieldRapportsVisiteMotifVisite;

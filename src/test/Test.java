@@ -5,6 +5,8 @@
  */
 package test;
 
+import Vue.RapportsVisite;
+
 /**
  *
  * @author btssio
@@ -16,7 +18,11 @@ public class Test {
      */
     public static void main(String[] args) {
         
-        // TODO code application logic here
+        RapportsVisite fenetre = new RapportsVisite();
+        fenetre.setTitle("Rapports de visite");
+        fenetre.setSize(650, 450);
+        fenetre.setLocationRelativeTo(null);
+        fenetre.setVisible(true);
     }
     
 }
