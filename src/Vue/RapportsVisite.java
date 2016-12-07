@@ -5,6 +5,10 @@
  */
 package Vue;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author latatiasteph
@@ -172,6 +176,52 @@ public class RapportsVisite extends javax.swing.JFrame {
             }
         });
     }
+
+    public JButton getjButtonRapportsVisiteDetails() {
+        return jButtonRapportsVisiteDetails;
+    }
+
+    public JButton getjButtonRapportsVisiteFermer() {
+        return jButtonRapportsVisiteFermer;
+    }
+
+    public JButton getjButtonRapportsVisiteNouveau() {
+        return jButtonRapportsVisiteNouveau;
+    }
+
+    public JButton getjButtonRapportsVisitePrécédent() {
+        return jButtonRapportsVisitePrécédent;
+    }
+
+    public JButton getjButtonRapportsVisiteSuivant() {
+        return jButtonRapportsVisiteSuivant;
+    }
+
+    public JComboBox<String> getjComboBoxRapportsVisitePraticien() {
+        return jComboBoxRapportsVisitePraticien;
+    }
+
+    public JTextField getjTextFieldRapportsVisiteBilan() {
+        return jTextFieldRapportsVisiteBilan;
+    }
+
+    public JTextField getjTextFieldRapportsVisiteDateRapport() {
+        return jTextFieldRapportsVisiteDateRapport;
+    }
+
+    public JTextField getjTextFieldRapportsVisiteMotifVisite() {
+        return jTextFieldRapportsVisiteMotifVisite;
+    }
+
+    public JTextField getjTextFieldRapportsVisiteNumeroRapport() {
+        return jTextFieldRapportsVisiteNumeroRapport;
+    }
+
+    public JTextField getjTextFieldTitreRapportVisite() {
+        return jTextFieldTitreRapportVisite;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonRapportsVisiteDetails;
