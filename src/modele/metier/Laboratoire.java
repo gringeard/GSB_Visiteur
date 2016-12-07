@@ -9,13 +9,13 @@ package modele.metier;
  *
  * @author btssio
  */
-public class laboratoire {
+public class Laboratoire {
     
     private String lab_code;
     private String lab_nom;
     private String lab_chefvente;
 
-    public laboratoire(String lab_code, String lab_nom, String lab_chefvente) {
+    public Laboratoire(String lab_code, String lab_nom, String lab_chefvente) {
         this.lab_code = lab_code;
         this.lab_nom = lab_nom;
         this.lab_chefvente = lab_chefvente;

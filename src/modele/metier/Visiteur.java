@@ -4,19 +4,19 @@ package modele.metier;
  *
  * @author btssio
  */
-public class visiteur {
+public class Visiteur {
     
     private String vis_matricule ;
     private String vis_nom;
     private String vis_prenom;
     private String vis_adresse;
-    private int vis_cp;
+    private String vis_cp;
     private String vis_ville;
-    private String vis_dateembauche;
+    private java.util.Date vis_dateembauche;
     private String sec_code;
     private String lab_code;
     
-    public visiteur(String vis_matricule, String vis_nom, String vis_prenom, String vis_adresse, int vis_cp, String vis_ville, String vis_dateembauche, String sec_code, String lab_code) {
+    public Visiteur(String vis_matricule, String vis_nom, String vis_prenom, String vis_adresse, String vis_cp, String vis_ville, java.util.Date vis_dateembauche, String sec_code, String lab_code) {
         this.vis_matricule = vis_matricule;
         this.vis_nom = vis_nom;
         this.vis_prenom = vis_prenom;
@@ -44,7 +44,7 @@ public class visiteur {
         return vis_adresse;
     }
 
-    public int getVis_cp() {
+    public String getVis_cp() {
         return vis_cp;
     }
 
@@ -52,7 +52,7 @@ public class visiteur {
         return vis_ville;
     }
 
-    public String getVis_dateembauche() {
+    public java.util.Date getVis_dateembauche() {
         return vis_dateembauche;
     }
 
@@ -80,7 +80,7 @@ public class visiteur {
         this.vis_adresse = vis_adresse;
     }
 
-    public void setVis_cp(int vis_cp) {
+    public void setVis_cp(String vis_cp) {
         this.vis_cp = vis_cp;
     }
 
@@ -88,7 +88,7 @@ public class visiteur {
         this.vis_ville = vis_ville;
     }
 
-    public void setVis_dateembauche(String vis_dateembauche) {
+    public void setVis_dateembauche(java.util.Date vis_dateembauche) {
         this.vis_dateembauche = vis_dateembauche;
     }
 

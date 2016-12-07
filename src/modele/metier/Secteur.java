@@ -9,12 +9,12 @@ package modele.metier;
  *
  * @author btssio
  */
-public class secteur {
+public class Secteur {
     
     private String sec_code;
     private String sec_libelle;
 
-    public secteur(String sec_code, String sec_libelle) {
+    public Secteur(String sec_code, String sec_libelle) {
         this.sec_code = sec_code;
         this.sec_libelle = sec_libelle;
     }
