@@ -5,6 +5,7 @@
  */
 package Vue;
 
+import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -144,7 +145,7 @@ public class RapportsVisite extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable2);
         if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(0).setCellEditor(null);
+            jTable2.getColumnModel().getColumn(0).setCellEditor(new DefaultCellEditor(jComboBoxTableau));
         }
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 310, 70));
