@@ -27,113 +27,113 @@ public class RapportsVisite extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldTitreRapportVisite = new javax.swing.JTextField();
         jLabelRapportsVisiteNumeroRapport = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelRapportsVisitePraticien = new javax.swing.JLabel();
+        jLabelRapportsVisiteDateRapport = new javax.swing.JLabel();
+        jLabelRapportsVisiteMotifVisite = new javax.swing.JLabel();
+        jLabelRapportsVisiteBilan = new javax.swing.JLabel();
+        jComboBoxRapportsVisitePraticien = new javax.swing.JComboBox<>();
+        jButtonRapportsVisiteDetails = new javax.swing.JButton();
+        jTextFieldRapportsVisiteDateRapport = new javax.swing.JTextField();
+        jTextFieldRapportsVisiteMotifVisite = new javax.swing.JTextField();
+        jTextFieldRapportsVisiteBilan = new javax.swing.JTextField();
+        jButtonRapportsVisitePrécédent = new javax.swing.JButton();
+        jButtonRapportsVisiteSuivant = new javax.swing.JButton();
+        jButtonRapportsVisiteNouveau = new javax.swing.JButton();
+        jTextFieldRapportsVisiteNumeroRapport = new javax.swing.JTextField();
+        jButtonRapportsVisiteFermer = new javax.swing.JButton();
+        jLabelRapportsVisiteLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(51, 51, 153));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("RAPPORTS DE VISITE");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(10, 11, 570, 28);
+        jTextFieldTitreRapportVisite.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jTextFieldTitreRapportVisite.setForeground(new java.awt.Color(51, 51, 153));
+        jTextFieldTitreRapportVisite.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldTitreRapportVisite.setText("RAPPORTS DE VISITE");
+        getContentPane().add(jTextFieldTitreRapportVisite);
+        jTextFieldTitreRapportVisite.setBounds(10, 11, 570, 28);
 
         jLabelRapportsVisiteNumeroRapport.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelRapportsVisiteNumeroRapport.setForeground(new java.awt.Color(160, 160, 160));
         jLabelRapportsVisiteNumeroRapport.setText("NumeroRapport");
         getContentPane().add(jLabelRapportsVisiteNumeroRapport);
-        jLabelRapportsVisiteNumeroRapport.setBounds(10, 41, 98, 15);
+        jLabelRapportsVisiteNumeroRapport.setBounds(10, 50, 98, 15);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 153));
-        jLabel2.setText("Praticien");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 79, 53, 15);
+        jLabelRapportsVisitePraticien.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelRapportsVisitePraticien.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelRapportsVisitePraticien.setText("Praticien");
+        getContentPane().add(jLabelRapportsVisitePraticien);
+        jLabelRapportsVisitePraticien.setBounds(10, 79, 53, 15);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 51, 153));
-        jLabel3.setText("Date Rapport");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 118, 84, 15);
+        jLabelRapportsVisiteDateRapport.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelRapportsVisiteDateRapport.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelRapportsVisiteDateRapport.setText("Date Rapport");
+        getContentPane().add(jLabelRapportsVisiteDateRapport);
+        jLabelRapportsVisiteDateRapport.setBounds(10, 118, 84, 15);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 153));
-        jLabel4.setText("Motif Visite");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 152, 70, 15);
+        jLabelRapportsVisiteMotifVisite.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelRapportsVisiteMotifVisite.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelRapportsVisiteMotifVisite.setText("Motif Visite");
+        getContentPane().add(jLabelRapportsVisiteMotifVisite);
+        jLabelRapportsVisiteMotifVisite.setBounds(10, 152, 70, 15);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 153));
-        jLabel5.setText("BILAN");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 210, 37, 15);
+        jLabelRapportsVisiteBilan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelRapportsVisiteBilan.setForeground(new java.awt.Color(51, 51, 153));
+        jLabelRapportsVisiteBilan.setText("BILAN");
+        getContentPane().add(jLabelRapportsVisiteBilan);
+        jLabelRapportsVisiteBilan.setBounds(10, 210, 37, 15);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(121, 77, 150, 20);
+        jComboBoxRapportsVisitePraticien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBoxRapportsVisitePraticien);
+        jComboBoxRapportsVisitePraticien.setBounds(121, 77, 150, 20);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 51, 153));
-        jButton1.setText("Détails");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(289, 77, 67, 21);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(121, 116, 75, 20);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(121, 150, 150, 20);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(121, 193, 174, 83);
+        jButtonRapportsVisiteDetails.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jButtonRapportsVisiteDetails.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonRapportsVisiteDetails.setText("Détails");
+        getContentPane().add(jButtonRapportsVisiteDetails);
+        jButtonRapportsVisiteDetails.setBounds(289, 77, 67, 21);
+        getContentPane().add(jTextFieldRapportsVisiteDateRapport);
+        jTextFieldRapportsVisiteDateRapport.setBounds(121, 116, 75, 20);
+        getContentPane().add(jTextFieldRapportsVisiteMotifVisite);
+        jTextFieldRapportsVisiteMotifVisite.setBounds(121, 150, 150, 20);
+        getContentPane().add(jTextFieldRapportsVisiteBilan);
+        jTextFieldRapportsVisiteBilan.setBounds(121, 193, 174, 83);
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(51, 51, 153));
-        jButton2.setText("Précédent");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(70, 350, 95, 23);
+        jButtonRapportsVisitePrécédent.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonRapportsVisitePrécédent.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonRapportsVisitePrécédent.setText("Précédent");
+        getContentPane().add(jButtonRapportsVisitePrécédent);
+        jButtonRapportsVisitePrécédent.setBounds(70, 350, 95, 23);
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(51, 51, 153));
-        jButton3.setText("Suivant");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(170, 350, 79, 23);
+        jButtonRapportsVisiteSuivant.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonRapportsVisiteSuivant.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonRapportsVisiteSuivant.setText("Suivant");
+        getContentPane().add(jButtonRapportsVisiteSuivant);
+        jButtonRapportsVisiteSuivant.setBounds(170, 350, 79, 23);
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(51, 51, 153));
-        jButton4.setText("Nouveau");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(260, 350, 85, 23);
+        jButtonRapportsVisiteNouveau.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonRapportsVisiteNouveau.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonRapportsVisiteNouveau.setText("Nouveau");
+        getContentPane().add(jButtonRapportsVisiteNouveau);
+        jButtonRapportsVisiteNouveau.setBounds(260, 350, 85, 23);
 
-        jTextField5.setEditable(false);
-        jTextField5.setForeground(new java.awt.Color(160, 160, 160));
-        jTextField5.setText("(NuméroAuto)");
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(118, 39, 74, 20);
+        jTextFieldRapportsVisiteNumeroRapport.setEditable(false);
+        jTextFieldRapportsVisiteNumeroRapport.setForeground(new java.awt.Color(160, 160, 160));
+        jTextFieldRapportsVisiteNumeroRapport.setText("(NuméroAuto)");
+        getContentPane().add(jTextFieldRapportsVisiteNumeroRapport);
+        jTextFieldRapportsVisiteNumeroRapport.setBounds(120, 50, 74, 20);
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(51, 51, 153));
-        jButton5.setText("Fermer");
-        getContentPane().add(jButton5);
-        jButton5.setBounds(500, 350, 73, 23);
+        jButtonRapportsVisiteFermer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonRapportsVisiteFermer.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonRapportsVisiteFermer.setText("Fermer");
+        getContentPane().add(jButtonRapportsVisiteFermer);
+        jButtonRapportsVisiteFermer.setBounds(500, 350, 73, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/bloggif_5842f44dbc891.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -20, 600, 420);
+        jLabelRapportsVisiteLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gh,hgfb.png"))); // NOI18N
+        getContentPane().add(jLabelRapportsVisiteLogo);
+        jLabelRapportsVisiteLogo.setBounds(0, -20, 630, 410);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -174,22 +174,22 @@ public class RapportsVisite extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton jButtonRapportsVisiteDetails;
+    private javax.swing.JButton jButtonRapportsVisiteFermer;
+    private javax.swing.JButton jButtonRapportsVisiteNouveau;
+    private javax.swing.JButton jButtonRapportsVisitePrécédent;
+    private javax.swing.JButton jButtonRapportsVisiteSuivant;
+    private javax.swing.JComboBox<String> jComboBoxRapportsVisitePraticien;
+    private javax.swing.JLabel jLabelRapportsVisiteBilan;
+    private javax.swing.JLabel jLabelRapportsVisiteDateRapport;
+    private javax.swing.JLabel jLabelRapportsVisiteLogo;
+    private javax.swing.JLabel jLabelRapportsVisiteMotifVisite;
     private javax.swing.JLabel jLabelRapportsVisiteNumeroRapport;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JLabel jLabelRapportsVisitePraticien;
+    private javax.swing.JTextField jTextFieldRapportsVisiteBilan;
+    private javax.swing.JTextField jTextFieldRapportsVisiteDateRapport;
+    private javax.swing.JTextField jTextFieldRapportsVisiteMotifVisite;
+    private javax.swing.JTextField jTextFieldRapportsVisiteNumeroRapport;
+    private javax.swing.JTextField jTextFieldTitreRapportVisite;
     // End of variables declaration//GEN-END:variables
 }
