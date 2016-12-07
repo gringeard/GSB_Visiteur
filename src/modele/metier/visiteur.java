@@ -103,10 +103,7 @@ public class visiteur {
     @Override
     public String toString() {
         return "visiteur{" + "vis_matricule=" + vis_matricule + ", vis_nom=" + vis_nom + ", vis_prenom=" + vis_prenom + ", vis_adresse=" + vis_adresse + ", vis_cp=" + vis_cp + ", vis_ville=" + vis_ville + ", vis_dateembauche=" + vis_dateembauche + ", sec_code=" + sec_code + ", lab_code=" + lab_code + '}';
-    }
-    
-    
-    
+    }   
     
     
 }
