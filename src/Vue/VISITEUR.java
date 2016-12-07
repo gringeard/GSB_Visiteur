@@ -5,6 +5,9 @@
  */
 package Vue;
 
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author latatiasteph
@@ -46,9 +49,9 @@ public class VISITEUR extends javax.swing.JFrame {
         jTextFieldCodePostalVisiteur = new javax.swing.JTextField();
         jTextFieldSecteurVisiteur = new javax.swing.JTextField();
         jTextFieldLaboVisiteur = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldBarreVisiteurs = new javax.swing.JTextField();
         jTextFieldVilleVisiteur = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelLogoVisiteurs = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -148,15 +151,15 @@ public class VISITEUR extends javax.swing.JFrame {
         getContentPane().add(jTextFieldLaboVisiteur);
         jTextFieldLaboVisiteur.setBounds(77, 299, 132, 20);
 
-        jTextField1.setBackground(new java.awt.Color(51, 51, 153));
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(10, 91, 277, 7);
+        jTextFieldBarreVisiteurs.setBackground(new java.awt.Color(51, 51, 153));
+        getContentPane().add(jTextFieldBarreVisiteurs);
+        jTextFieldBarreVisiteurs.setBounds(10, 91, 277, 7);
         getContentPane().add(jTextFieldVilleVisiteur);
         jTextFieldVilleVisiteur.setBounds(122, 223, 87, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gh,hgfb.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 620, 420);
+        jLabelLogoVisiteurs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gh,hgfb.png"))); // NOI18N
+        getContentPane().add(jLabelLogoVisiteurs);
+        jLabelLogoVisiteurs.setBounds(0, 0, 620, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -201,22 +204,56 @@ public class VISITEUR extends javax.swing.JFrame {
         });
     }
 
+    public JComboBox<String> getjComboBoxChercherVisiteur() {
+        return jComboBoxChercherVisiteur;
+    }
+
+    public JTextField getjTextFieldAdresseVisiteur() {
+        return jTextFieldAdresseVisiteur;
+    }
+
+    public JTextField getjTextFieldCodePostalVisiteur() {
+        return jTextFieldCodePostalVisiteur;
+    }
+
+    public JTextField getjTextFieldLaboVisiteur() {
+        return jTextFieldLaboVisiteur;
+    }
+
+    public JTextField getjTextFieldNomVisiteur() {
+        return jTextFieldNomVisiteur;
+    }
+
+    public JTextField getjTextFieldPrenomVisiteur() {
+        return jTextFieldPrenomVisiteur;
+    }
+
+    public JTextField getjTextFieldSecteurVisiteur() {
+        return jTextFieldSecteurVisiteur;
+    }
+
+    public JTextField getjTextFieldTitreVisiteurs() {
+        return jTextFieldTitreVisiteurs;
+    }
+
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonFermerVisiteur;
     private javax.swing.JButton jButtonPrécédentVisiteur;
     private javax.swing.JButton jButtonSuivantVisiteur;
     private javax.swing.JButton jButtonValiderNomVisiteur;
     private javax.swing.JComboBox<String> jComboBoxChercherVisiteur;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAdresseVisiteur;
     private javax.swing.JLabel jLabelChercherVisiteur;
     private javax.swing.JLabel jLabelLaboVisiteur;
+    private javax.swing.JLabel jLabelLogoVisiteurs;
     private javax.swing.JLabel jLabelNomVisiteur;
     private javax.swing.JLabel jLabelPrenomVisiteur;
     private javax.swing.JLabel jLabelSecteurVisiteur;
     private javax.swing.JLabel jLabelVilleVisiteur;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextFieldAdresseVisiteur;
+    private javax.swing.JTextField jTextFieldBarreVisiteurs;
     private javax.swing.JTextField jTextFieldCodePostalVisiteur;
     private javax.swing.JTextField jTextFieldLaboVisiteur;
     private javax.swing.JTextField jTextFieldNomVisiteur;
