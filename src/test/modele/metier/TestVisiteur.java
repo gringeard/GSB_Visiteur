@@ -25,7 +25,8 @@ public class TestVisiteur {
         visit.setVis_cp("44000");
         visit.setVis_ville("Nantes");
         System.out.println("Visiteur modifié : "+visit);
-        visit1 = new Visiteur("LEL",null, null, null, null, null, null, null, null);
+        System.out.println("\nTest n°3 : Visiteur semblable à un visiteur 'null'");
+        visit1 = new Visiteur(null,null, null, null, null, null, null, null, null);
         System.out.println(visit1.equals(visit));
     }
     
