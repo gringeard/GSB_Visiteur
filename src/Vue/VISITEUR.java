@@ -64,7 +64,7 @@ public class VISITEUR extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldTitreVisiteurs);
-        jTextFieldTitreVisiteurs.setBounds(10, 11, 399, 28);
+        jTextFieldTitreVisiteurs.setBounds(10, 11, 610, 28);
 
         jLabelChercherVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelChercherVisiteur.setForeground(new java.awt.Color(51, 51, 153));
@@ -154,9 +154,9 @@ public class VISITEUR extends javax.swing.JFrame {
         getContentPane().add(jTextFieldVilleVisiteur);
         jTextFieldVilleVisiteur.setBounds(122, 223, 87, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/bloggif_5842f44dbc891.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gh,hgfb.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-6, 0, 580, 380);
+        jLabel1.setBounds(0, 0, 620, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

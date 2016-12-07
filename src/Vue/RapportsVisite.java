@@ -131,9 +131,9 @@ public class RapportsVisite extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(500, 350, 73, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/bloggif_5842f44dbc891.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gh,hgfb.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -20, 600, 420);
+        jLabel1.setBounds(0, -20, 630, 410);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
