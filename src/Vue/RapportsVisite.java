@@ -58,6 +58,7 @@ public class RapportsVisite extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextFieldTitreRapportVisite.setEditable(false);
         jTextFieldTitreRapportVisite.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jTextFieldTitreRapportVisite.setForeground(new java.awt.Color(51, 51, 153));
         jTextFieldTitreRapportVisite.setHorizontalAlignment(javax.swing.JTextField.CENTER);
