@@ -19,8 +19,9 @@ public class VISITEUR extends javax.swing.JFrame {
      */
     public VISITEUR() {
         initComponents();
+        this.setSize(625, 430);
+        this.setLocationRelativeTo(null);        
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -201,7 +202,9 @@ public class VISITEUR extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VISITEUR().setVisible(true);
+                
             }
+            
         });
     }
 

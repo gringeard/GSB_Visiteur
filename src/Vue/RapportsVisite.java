@@ -21,6 +21,8 @@ public class RapportsVisite extends javax.swing.JFrame {
      */
     public RapportsVisite() {
         initComponents();
+        this.setSize(625, 430);
+        this.setLocationRelativeTo(null);
     }
 
     /**
