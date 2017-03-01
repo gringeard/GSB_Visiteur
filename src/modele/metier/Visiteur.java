@@ -13,10 +13,10 @@ public class Visiteur {
     private String vis_cp;
     private String vis_ville;
     private java.util.Date vis_dateembauche;
-    private String sec_code;
-    private String lab_code;
+    private Secteur secteur;
+    private Laboratoire laboratoire;
     
-    public Visiteur(String vis_matricule, String vis_nom, String vis_prenom, String vis_adresse, String vis_cp, String vis_ville, java.util.Date vis_dateembauche, String sec_code, String lab_code) {
+    public Visiteur(String vis_matricule, String vis_nom, String vis_prenom, String vis_adresse, String vis_cp, String vis_ville, java.util.Date vis_dateembauche, Secteur secteur, Laboratoire laboratoire) {
         this.vis_matricule = vis_matricule;
         this.vis_nom = vis_nom;
         this.vis_prenom = vis_prenom;
@@ -24,8 +24,8 @@ public class Visiteur {
         this.vis_cp = vis_cp;
         this.vis_ville = vis_ville;
         this.vis_dateembauche = vis_dateembauche;
-        this.sec_code = sec_code;
-        this.lab_code = lab_code;
+        this.secteur = secteur;
+        this.laboratoire = laboratoire;
     }
 
     public String getVis_matricule() {
@@ -56,12 +56,12 @@ public class Visiteur {
         return vis_dateembauche;
     }
 
-    public String getSec_code() {
-        return sec_code;
+    public Secteur getSecteur() {
+        return secteur;
     }
 
-    public String getLab_code() {
-        return lab_code;
+    public Laboratoire getLaboratoire() {
+        return laboratoire;
     }
 
     public void setVis_matricule(String vis_matricule) {
@@ -92,17 +92,17 @@ public class Visiteur {
         this.vis_dateembauche = vis_dateembauche;
     }
 
-    public void setSec_code(String sec_code) {
-        this.sec_code = sec_code;
+    public void setSecteur(Secteur secteur) {
+        this.secteur = secteur;
     }
 
-    public void setLab_code(String lab_code) {
-        this.lab_code = lab_code;
+    public void setLaboratoire(Laboratoire laboratoire) {
+        this.laboratoire = laboratoire;
     }
 
     @Override
     public String toString() {
-        return "visiteur{" + "vis_matricule=" + vis_matricule + ", vis_nom=" + vis_nom + ", vis_prenom=" + vis_prenom + ", vis_adresse=" + vis_adresse + ", vis_cp=" + vis_cp + ", vis_ville=" + vis_ville + ", vis_dateembauche=" + vis_dateembauche + ", sec_code=" + sec_code + ", lab_code=" + lab_code + '}';
+        return "visiteur{" + "vis_matricule=" + vis_matricule + ", vis_nom=" + vis_nom + ", vis_prenom=" + vis_prenom + ", vis_adresse=" + vis_adresse + ", vis_cp=" + vis_cp + ", vis_ville=" + vis_ville + ", vis_dateembauche=" + vis_dateembauche + ", secteur=" + secteur + ", laboratoire=" + laboratoire + '}';
     }   
     
     

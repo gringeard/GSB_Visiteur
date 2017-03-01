@@ -19,8 +19,9 @@ public class VISITEUR extends javax.swing.JFrame {
      */
     public VISITEUR() {
         initComponents();
+        this.setSize(625, 430);
+        this.setLocationRelativeTo(null);        
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,7 +42,7 @@ public class VISITEUR extends javax.swing.JFrame {
         jButtonPrécédentVisiteur = new javax.swing.JButton();
         jButtonSuivantVisiteur = new javax.swing.JButton();
         jButtonFermerVisiteur = new javax.swing.JButton();
-        jComboBoxChercherVisiteur = new javax.swing.JComboBox<>();
+        jComboBoxChercherVisiteur = new javax.swing.JComboBox<String>();
         jButtonValiderNomVisiteur = new javax.swing.JButton();
         jTextFieldNomVisiteur = new javax.swing.JTextField();
         jTextFieldPrenomVisiteur = new javax.swing.JTextField();
@@ -57,6 +58,7 @@ public class VISITEUR extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(null);
 
+        jTextFieldTitreVisiteurs.setEditable(false);
         jTextFieldTitreVisiteurs.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jTextFieldTitreVisiteurs.setForeground(new java.awt.Color(51, 51, 153));
         jTextFieldTitreVisiteurs.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -67,95 +69,95 @@ public class VISITEUR extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldTitreVisiteurs);
-        jTextFieldTitreVisiteurs.setBounds(10, 11, 610, 28);
+        jTextFieldTitreVisiteurs.setBounds(10, 11, 610, 26);
 
         jLabelChercherVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelChercherVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jLabelChercherVisiteur.setText("Chercher");
         getContentPane().add(jLabelChercherVisiteur);
-        jLabelChercherVisiteur.setBounds(15, 61, 54, 15);
+        jLabelChercherVisiteur.setBounds(10, 60, 64, 15);
 
         jLabelNomVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelNomVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jLabelNomVisiteur.setText("NOM");
         getContentPane().add(jLabelNomVisiteur);
-        jLabelNomVisiteur.setBounds(10, 111, 28, 15);
+        jLabelNomVisiteur.setBounds(10, 111, 33, 15);
 
         jLabelPrenomVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPrenomVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jLabelPrenomVisiteur.setText("PRENOM");
         getContentPane().add(jLabelPrenomVisiteur);
-        jLabelPrenomVisiteur.setBounds(10, 149, 52, 15);
+        jLabelPrenomVisiteur.setBounds(10, 149, 59, 15);
 
         jLabelAdresseVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelAdresseVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jLabelAdresseVisiteur.setText("ADRESSE");
         getContentPane().add(jLabelAdresseVisiteur);
-        jLabelAdresseVisiteur.setBounds(10, 187, 57, 15);
+        jLabelAdresseVisiteur.setBounds(10, 187, 62, 15);
 
         jLabelVilleVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelVilleVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jLabelVilleVisiteur.setText("VILLE");
         getContentPane().add(jLabelVilleVisiteur);
-        jLabelVilleVisiteur.setBounds(10, 225, 34, 15);
+        jLabelVilleVisiteur.setBounds(10, 225, 37, 15);
 
         jLabelSecteurVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelSecteurVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jLabelSecteurVisiteur.setText("SECTEUR");
         getContentPane().add(jLabelSecteurVisiteur);
-        jLabelSecteurVisiteur.setBounds(10, 263, 54, 15);
+        jLabelSecteurVisiteur.setBounds(10, 263, 61, 15);
 
         jLabelLaboVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelLaboVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jLabelLaboVisiteur.setText("LABO");
         getContentPane().add(jLabelLaboVisiteur);
-        jLabelLaboVisiteur.setBounds(10, 301, 33, 15);
+        jLabelLaboVisiteur.setBounds(10, 301, 37, 15);
 
         jButtonPrécédentVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonPrécédentVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jButtonPrécédentVisiteur.setText("Précédent");
         getContentPane().add(jButtonPrécédentVisiteur);
-        jButtonPrécédentVisiteur.setBounds(77, 347, 95, 23);
+        jButtonPrécédentVisiteur.setBounds(77, 347, 107, 25);
 
         jButtonSuivantVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonSuivantVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jButtonSuivantVisiteur.setText("Suivant");
         getContentPane().add(jButtonSuivantVisiteur);
-        jButtonSuivantVisiteur.setBounds(200, 347, 79, 23);
+        jButtonSuivantVisiteur.setBounds(200, 347, 87, 25);
 
         jButtonFermerVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonFermerVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jButtonFermerVisiteur.setText("Fermer");
         getContentPane().add(jButtonFermerVisiteur);
-        jButtonFermerVisiteur.setBounds(480, 350, 73, 23);
+        jButtonFermerVisiteur.setBounds(480, 350, 84, 25);
 
-        jComboBoxChercherVisiteur.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxChercherVisiteur.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBoxChercherVisiteur);
-        jComboBoxChercherVisiteur.setBounds(77, 59, 132, 20);
+        jComboBoxChercherVisiteur.setBounds(77, 59, 132, 24);
 
         jButtonValiderNomVisiteur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonValiderNomVisiteur.setForeground(new java.awt.Color(51, 51, 153));
         jButtonValiderNomVisiteur.setText("Ok");
         getContentPane().add(jButtonValiderNomVisiteur);
-        jButtonValiderNomVisiteur.setBounds(227, 57, 49, 23);
+        jButtonValiderNomVisiteur.setBounds(227, 57, 53, 25);
         getContentPane().add(jTextFieldNomVisiteur);
-        jTextFieldNomVisiteur.setBounds(77, 109, 132, 20);
+        jTextFieldNomVisiteur.setBounds(77, 109, 132, 19);
         getContentPane().add(jTextFieldPrenomVisiteur);
-        jTextFieldPrenomVisiteur.setBounds(77, 147, 132, 20);
+        jTextFieldPrenomVisiteur.setBounds(77, 147, 132, 19);
         getContentPane().add(jTextFieldAdresseVisiteur);
-        jTextFieldAdresseVisiteur.setBounds(77, 185, 132, 20);
+        jTextFieldAdresseVisiteur.setBounds(77, 185, 132, 19);
         getContentPane().add(jTextFieldCodePostalVisiteur);
-        jTextFieldCodePostalVisiteur.setBounds(77, 223, 35, 20);
+        jTextFieldCodePostalVisiteur.setBounds(77, 223, 35, 19);
         getContentPane().add(jTextFieldSecteurVisiteur);
-        jTextFieldSecteurVisiteur.setBounds(77, 261, 132, 20);
+        jTextFieldSecteurVisiteur.setBounds(77, 261, 132, 19);
         getContentPane().add(jTextFieldLaboVisiteur);
-        jTextFieldLaboVisiteur.setBounds(77, 299, 132, 20);
+        jTextFieldLaboVisiteur.setBounds(77, 299, 132, 19);
 
         jTextFieldBarreVisiteurs.setBackground(new java.awt.Color(51, 51, 153));
         getContentPane().add(jTextFieldBarreVisiteurs);
         jTextFieldBarreVisiteurs.setBounds(10, 91, 277, 7);
         getContentPane().add(jTextFieldVilleVisiteur);
-        jTextFieldVilleVisiteur.setBounds(122, 223, 87, 20);
+        jTextFieldVilleVisiteur.setBounds(122, 223, 87, 19);
 
         jLabelLogoVisiteurs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gh,hgfb.png"))); // NOI18N
         getContentPane().add(jLabelLogoVisiteurs);
@@ -200,7 +202,9 @@ public class VISITEUR extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VISITEUR().setVisible(true);
+                
             }
+            
         });
     }
 

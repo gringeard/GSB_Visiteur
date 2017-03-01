@@ -21,9 +21,9 @@ public class TestSecteur {
         sect.setSec_code("T");
         sect.setSec_libelle("Toulouse");
         System.out.println("Secteur modifié : "+sect);
-        System.out.println("\nTest n°3 : Secteur semblable à un visiteur 'null'");
+        System.out.println("\nTest n°3 : Secteur semblable à un secteur 'null'");
         sect1 = new Secteur(null,null);
-        System.out.println(sect1.equals(sect));
+        System.out.println("Sont ils semblables ? " + sect1.equals(sect));
         
     }
     
