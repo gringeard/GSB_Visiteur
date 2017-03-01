@@ -6,6 +6,7 @@
 package test.modele.dao;
 
 import java.sql.SQLException;
+import modele.dao.Jdbc;
 
 /**
  *
@@ -28,7 +29,7 @@ public class testDaoVisiteur {
     }
 
     private static void test0_Connexion() {
-        
+        Jdbc.creer("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:", "@localhost:1521:XE", "", "GSB", "gsb");
     }
     
 }
