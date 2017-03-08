@@ -35,7 +35,7 @@ public class CtrlVisiteur implements WindowListener, ActionListener{
         this.vue.addWindowListener(this);
 //        this.vue.getjComboBoxChercherVisiteur().addActionListener(this);
 //        this.vue.getjButtonValiderNomVisiteur().addActionListener(this);
-//        this.vue.getjButtonFermerVisiteur().addActionListener(this);
+        this.vue.getjButtonFermerVisiteur().addActionListener(this);
 //        this.vue.getjButtonPrécédentVisiteur().addActionListener(this);
 //        this.vue.getjButtonSuivantVisiteur().addActionListener(this);
        // préparer l'état iniitial de la vue
@@ -79,7 +79,7 @@ public class CtrlVisiteur implements WindowListener, ActionListener{
 
     @Override
     public void windowClosing(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        quitter();
     }
 
     @Override
@@ -109,7 +109,9 @@ public class CtrlVisiteur implements WindowListener, ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (e.getSource().equals(vue.getjButtonFermerVisiteur())){
+            quitter();
+        }
     }
 
     private void afficherLesVisiteurs(List<Visiteur> lesVisiteurs) {
@@ -124,6 +126,10 @@ public class CtrlVisiteur implements WindowListener, ActionListener{
         //VueVisiteurs.setjComboBoxChercherVisiteur(jComboBoxChercherVisiteur);
         
     }
-
+    
+    private void quitter(){
+        ctrlPrincipal.quitterApplication();
+    }
+    
 }
     
