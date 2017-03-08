@@ -10,6 +10,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import modele.metier.Visiteur;
+import modele.metier.Secteur;
+import modele.metier.Laboratoire;
+import modele.dao.DaoLaboratoire;
+import modele.dao.DaoSecteur;
 
 /**
  *
@@ -44,8 +48,11 @@ public class DaoVisiteur {
             Date dateEmb = rs.getDate("VIS_DATEEMBAUCHE");
             String secCode = rs.getString("SEC_CODE");
             String labCode = rs.getString("LAB_CODE");
+//            TODO classDAO pour secteur et labcode
             
-            unVisiteur = new Visiteur(id, nom, prenom, adresse, cp, ville, dateEmb, secCode, labCode);
+            Laboratoire labo = DaoLaboratoire.selectOneById(labCode);
+            Secteur sec = DaoSecteur.selectOneById(secCode);
+            unVisiteur = new Visiteur(id, nom, prenom, adresse, cp, ville, dateEmb, sec, labo);
         }
         return unVisiteur;
     }
