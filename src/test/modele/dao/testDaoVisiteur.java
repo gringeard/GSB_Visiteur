@@ -15,6 +15,7 @@ import modele.dao.DaoVisiteur;
  * @author btssio
  */
 import java.sql.Connection;
+import java.util.List;
 public class testDaoVisiteur {
 
     /**
@@ -26,9 +27,11 @@ public class testDaoVisiteur {
                 java.sql.Connection cnx = null;
 
                 test0_Connexion();
-                System.out.println("Test1 effectué : connexion\n");
+                System.out.println("Test0 effectué : connexion\n");
                 test1_GetOneVisiteur();
-                System.out.println("Test2 effectué : get one\n");
+                System.out.println("Test1 effectué : get one\n");
+                test2_GetAll();
+                System.out.println("Test2 effectué : get all\n");
         
     }
 
@@ -45,6 +48,11 @@ public class testDaoVisiteur {
         test = DaoVisiteur.selectOneById(matricule);
         System.out.println("test");
         System.out.println(test);
+    }
+    
+    private static void test2_GetAll() throws SQLException {
+        List<Visiteur> desVisiteurs = DaoVisiteur.selectAll();
+        System.out.println("Les visiteurs lus : "+desVisiteurs.toString());
     }
     
 }
