@@ -5,17 +5,17 @@
  */
 package test.modele.dao;
 
+import java.sql.Connection;
 import java.sql.SQLException;
-import modele.metier.Visiteur;
+import modele.dao.DaoLaboratoire;
 import modele.dao.Jdbc;
-import modele.dao.DaoVisiteur;
+import modele.metier.Laboratoire;
 
 /**
  *
  * @author btssio
  */
-import java.sql.Connection;
-public class testDaoVisiteur {
+public class tetsDaoLaboratoire {
 
     /**
      * @param args the command line arguments
@@ -27,7 +27,7 @@ public class testDaoVisiteur {
 
                 test0_Connexion();
                 System.out.println("Test1 effectué : connexion\n");
-                test1_GetOneVisiteur();
+                test1_GetOneLaboratoire();
                 System.out.println("Test2 effectué : get one\n");
         
     }
@@ -39,10 +39,10 @@ public class testDaoVisiteur {
         System.out.println(cnx);
     }
     
-    private static void test1_GetOneVisiteur() throws SQLException {
-        Visiteur test;
-        String matricule = "b34";
-        test = DaoVisiteur.selectOneById(matricule);
+    private static void test1_GetOneLaboratoire() throws SQLException {
+        Laboratoire test;
+        String id_labo = "SW";
+        test = DaoLaboratoire.selectOneById(id_labo);
         System.out.println("test");
         System.out.println(test);
     }

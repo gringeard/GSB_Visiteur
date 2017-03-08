@@ -27,7 +27,7 @@ public class DaoVisiteur {
      * @return objet Visiteur
      * @throws SQLException 
      */
-    public static Visiteur selectOneByID(String matricule) throws SQLException {
+    public static Visiteur selectOneById(String matricule) throws SQLException {
         ResultSet rs;
         PreparedStatement pstmt;
         Jdbc jdbc = Jdbc.getInstance();

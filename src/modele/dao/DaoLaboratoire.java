@@ -22,7 +22,7 @@ public class DaoLaboratoire {
         Jdbc jdbc = Jdbc.getInstance();
         
         // préparer la requête
-        String requete = "SELECT * FROM SECTEUR WHERE SEC_CODE = ?";
+        String requete = "SELECT * FROM LABO WHERE LAB_CODE = ?";
         pstmt = jdbc.getConnexion().prepareStatement(requete);
         pstmt.setString(1, lab_code);
         rs = pstmt.executeQuery();
