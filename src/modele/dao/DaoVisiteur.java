@@ -48,7 +48,6 @@ public class DaoVisiteur {
             Date dateEmb = rs.getDate("VIS_DATEEMBAUCHE");
             String secCode = rs.getString("SEC_CODE");
             String labCode = rs.getString("LAB_CODE");
-//            TODO classDAO pour secteur et labcode
             
             Laboratoire labo = DaoLaboratoire.selectOneById(labCode);
             Secteur sec = DaoSecteur.selectOneById(secCode);

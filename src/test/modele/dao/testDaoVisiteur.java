@@ -25,7 +25,7 @@ public class testDaoVisiteur {
         
                 java.sql.Connection cnx = null;
 
-                test0_Connexion();
+//                test0_Connexion();
                 System.out.println("Test1 effectué : connexion\n");
                 test1_GetOneVisiteur();
                 System.out.println("Test2 effectué : get one\n");
@@ -36,7 +36,6 @@ public class testDaoVisiteur {
         Jdbc.creer("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:", "@localhost:1521:XE", "", "gsb", "gsb");
         Jdbc.getInstance().connecter();
         Connection cnx = Jdbc.getInstance().getConnexion();
-        
         System.out.println(cnx);
     }
     
@@ -44,6 +43,7 @@ public class testDaoVisiteur {
         Visiteur test;
         String matricule = "a131";
         test = DaoVisiteur.selectOneByID(matricule);
+        System.out.println("test");
         System.out.println(test);
     }
     
