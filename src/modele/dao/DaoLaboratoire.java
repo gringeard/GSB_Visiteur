@@ -17,7 +17,7 @@ import modele.metier.Laboratoire;
 public class DaoLaboratoire {
     
     /**
-     * 
+     *
      * @param lab_code
      * @return
      * @throws SQLException 

@@ -20,7 +20,7 @@ public class Laboratoire {
         this.lab_nom = lab_nom;
         this.lab_chefvente = lab_chefvente;
     }
-
+    
     public String getLab_code() {
         return lab_code;
     }
