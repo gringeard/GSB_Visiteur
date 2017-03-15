@@ -5,6 +5,8 @@
  */
 package modele.metier;
 
+import java.util.Date;
+
 /**
  *
  * @author btssio
@@ -12,13 +14,13 @@ package modele.metier;
 public class Rapport {
     
     private Visiteur visiteur ;
-    private String rap_num;
+    private int rap_num;
     private Praticien pra_num;
-    private String rap_date;
+    private Date rap_date;
     private String rap_bilan;
     private String rap_motif;
 
-    public Rapport(Visiteur visiteur, String rap_num, Praticien pra_num, String rap_date, String rap_bilan, String rap_motif) {
+    public Rapport(Visiteur visiteur, int rap_num, Praticien pra_num, Date rap_date, String rap_bilan, String rap_motif) {
         this.visiteur = visiteur;
         this.rap_num = rap_num;
         this.pra_num = pra_num;
@@ -40,11 +42,11 @@ public class Rapport {
         this.visiteur = visiteur;
     }
 
-    public String getRap_num() {
+    public int getRap_num() {
         return rap_num;
     }
 
-    public void setRap_num(String rap_num) {
+    public void setRap_num(int rap_num) {
         this.rap_num = rap_num;
     }
 
@@ -56,11 +58,11 @@ public class Rapport {
         this.pra_num = pra_num;
     }
 
-    public String getRap_date() {
+    public Date getRap_date() {
         return rap_date;
     }
 
-    public void setRap_date(String rap_date) {
+    public void setRap_date(Date rap_date) {
         this.rap_date = rap_date;
     }
 
