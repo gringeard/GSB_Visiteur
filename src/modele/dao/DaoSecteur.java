@@ -16,6 +16,12 @@ import modele.metier.Secteur;
  */
 public class DaoSecteur {
     
+    /**
+     * 
+     * @param code
+     * @return
+     * @throws SQLException 
+     */
     public static Secteur selectOneById(String code) throws SQLException {
         ResultSet rs;
         PreparedStatement pstmt;

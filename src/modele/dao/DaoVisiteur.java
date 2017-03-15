@@ -29,6 +29,12 @@ public class DaoVisiteur {
      * @return objet Visiteur
      * @throws SQLException 
      */
+    
+    /**
+     * @param matricule
+     * @return
+     * @throws SQLException 
+     */
     public static Visiteur selectOneById(String matricule) throws SQLException {
         ResultSet rs;
         PreparedStatement pstmt;
@@ -58,6 +64,11 @@ public class DaoVisiteur {
         return unVisiteur;
     }
     
+    /**
+     * 
+     * @return
+     * @throws SQLException 
+     */
     public static List<Visiteur> selectAll() throws SQLException {
         List<Visiteur> lesVisiteurs = new ArrayList<Visiteur>();
         Visiteur unVisiteur;
