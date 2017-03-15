@@ -5,7 +5,7 @@
  */
 package test;
 
-import Vue.RapportsVisite;
+import Vue.VueCompteRendu;
 
 /**
  *
@@ -18,7 +18,7 @@ public class Test {
      */
     public static void main(String[] args) {
         
-        RapportsVisite fenetre = new RapportsVisite();
+        VueCompteRendu fenetre = new VueCompteRendu();
         fenetre.setTitle("Rapports de visite");
         fenetre.setSize(650, 450);
         fenetre.setLocationRelativeTo(null);

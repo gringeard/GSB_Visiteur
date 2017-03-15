@@ -5,7 +5,9 @@
  */
 package gsb_visiteurs2;
 
+import Vue.VueMenu;
 import Vue.VueVisiteurs;
+import controleur.CtrlMenu;
 import controleur.CtrlPrincipal;
 import controleur.CtrlVisiteur;
 import java.sql.SQLException;
@@ -34,13 +36,16 @@ public class GSB_visiteurs2 {
        }
        CtrlPrincipal leControleurPrincipal = new CtrlPrincipal();
        VueVisiteurs laVueVisiteur = new VueVisiteurs();
+       VueMenu laVueMenu = new VueMenu();
        CtrlVisiteur leControleurVisiteur = new CtrlVisiteur(laVueVisiteur, leControleurPrincipal);
+       CtrlMenu leControleurMenu = new CtrlMenu(laVueMenu, leControleurPrincipal);
        leControleurPrincipal.setCtrlVisiteur(leControleurVisiteur);
+       leControleurPrincipal.setCtrlMenu(leControleurMenu);
        
         
 
         // afficher la vue
-        laVueVisiteur.setVisible(true);
+        laVueMenu.setVisible(true);
     }
     
 }

@@ -28,8 +28,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jButtonVisiteurs" pref="50" max="32767" attributes="0"/>
-                  <Component id="jButtonCompteRendus" max="32767" attributes="0"/>
+                  <Component id="jButtonVisiteur" pref="50" max="32767" attributes="0"/>
+                  <Component id="jButtonCompteRendu" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -64,10 +64,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabelCompteRendus" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButtonCompteRendus" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jButtonCompteRendu" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButtonVisiteurs" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jButtonVisiteur" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="204" max="32767" attributes="0"/>
@@ -83,14 +83,14 @@
         <Property name="text" type="java.lang.String" value="Gestion des comptes rendus"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonCompteRendus">
+    <Component class="javax.swing.JButton" name="jButtonCompteRendu">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelCompteRendus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Comptes-rendus"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonVisiteurs">
+    <Component class="javax.swing.JButton" name="jButtonVisiteur">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelVisiteurs">
       <Properties>

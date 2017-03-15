@@ -79,7 +79,7 @@ public class CtrlVisiteur implements WindowListener, ActionListener{
 
     @Override
     public void windowClosing(WindowEvent e) {
-        quitter();
+        ctrlPrincipal.gotoMenu();
     }
 
     @Override
@@ -134,7 +134,7 @@ public class CtrlVisiteur implements WindowListener, ActionListener{
     }
     
     private void quitter(){
-        ctrlPrincipal.quitterApplication();
+        ctrlPrincipal.gotoMenu();
     }
     
     private void afficherVisiteur(Visiteur leVisiteur) {

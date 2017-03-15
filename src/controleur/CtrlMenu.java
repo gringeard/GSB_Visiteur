@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
 import Vue.VueMenu;
 import java.awt.event.ActionEvent;
+import java.awt.event.WindowEvent;
 
 /**
  *
@@ -24,8 +25,8 @@ public class CtrlMenu implements WindowListener, ActionListener{
         this.ctrlPrincipal = ctrl;
         // le contrôleur écoute la vue
         this.vue.addWindowListener(this);
-        this.vue.getjButtonFermerMenu().addActionListener(this);
-        this.vue.getjButtonCompterendu().addActionListener(this);
+        this.vue.getjButtonQuitter().addActionListener(this);
+        this.vue.getjButtonCompteRendu().addActionListener(this);
         this.vue.getjButtonVisiteur().addActionListener(this);
     }
     
@@ -35,10 +36,10 @@ public class CtrlMenu implements WindowListener, ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource().equals(vue.getjButtonFermerVisiteur())){
+        if (e.getSource().equals(vue.getjButtonQuitter())){
             quitter();
         }
-        if (e.getSource().equals(vue.getjButtonCompterendu())){
+        if (e.getSource().equals(vue.getjButtonCompteRendu())){
             gotoCompterendu();
         }
         if (e.getSource().equals(vue.getjButtonVisiteur())){
@@ -60,6 +61,41 @@ public class CtrlMenu implements WindowListener, ActionListener{
     
     public VueMenu getVue() {
         return vue;
+    }
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
         
 }
