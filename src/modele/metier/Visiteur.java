@@ -102,7 +102,8 @@ public class Visiteur {
 
     @Override
     public String toString() {
-        return "visiteur{" + "vis_matricule=" + vis_matricule + ", vis_nom=" + vis_nom + ", vis_prenom=" + vis_prenom + ", vis_adresse=" + vis_adresse + ", vis_cp=" + vis_cp + ", vis_ville=" + vis_ville + ", vis_dateembauche=" + vis_dateembauche + ", secteur=" + secteur + ", laboratoire=" + laboratoire + '}';
+//        return "visiteur{" + "vis_matricule=" + vis_matricule + ", vis_nom=" + vis_nom + ", vis_prenom=" + vis_prenom + ", vis_adresse=" + vis_adresse + ", vis_cp=" + vis_cp + ", vis_ville=" + vis_ville + ", vis_dateembauche=" + vis_dateembauche + ", secteur=" + secteur + ", laboratoire=" + laboratoire + '}';
+          return vis_nom + " " + vis_prenom;
     }   
     
     
