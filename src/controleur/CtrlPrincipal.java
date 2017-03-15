@@ -1,13 +1,27 @@
 package controleur;
 
+import Vue.VueVisiteurs;
 import javax.swing.JOptionPane;
 
 public class CtrlPrincipal {
 
     CtrlVisiteur ctrlVisiteur;
+    CtrlMenu ctrlMenu;
 
     public void afficherVisiteur() {
         this.ctrlVisiteur.getVue().setVisible(true);
+    }
+    
+    public void afficherMenu() {
+        this.ctrlMenu.getVue().setVisible(true);
+    }
+    
+    public void cacherVisiteur() {
+        this.ctrlVisiteur.getVue().setVisible(false);
+    }
+    
+    public void cacherMenu() {
+        this.ctrlMenu.getVue().setVisible(false);
     }
 
 
@@ -18,6 +32,15 @@ public class CtrlPrincipal {
             // mettre fin à l'application
             System.exit(0);
         }
+    }
+    
+    public void gotoVisiteur() {
+        cacherMenu();
+        afficherVisiteur();
+    }
+    
+    public void gotoCompterendu() {    
+        
     }
 
     public CtrlVisiteur getCtrlVisiteur() {
