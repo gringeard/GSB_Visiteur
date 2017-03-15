@@ -265,7 +265,7 @@ public class VueVisiteurs extends javax.swing.JFrame {
     }
     
     public JTextField getjTextFieldVilleVisiteur() {
-        return jTextFieldTitreVisiteurs;
+        return jTextFieldVilleVisiteur;
     }
 
     public JButton getjButtonFermerVisiteur() {

@@ -34,10 +34,10 @@ public class CtrlVisiteur implements WindowListener, ActionListener{
         // le contrôleur écoute la vue
         this.vue.addWindowListener(this);
 //        this.vue.getjComboBoxChercherVisiteur().addActionListener(this);
-//        this.vue.getjButtonValiderNomVisiteur().addActionListener(this);
+        this.vue.getjButtonValiderNomVisiteur().addActionListener(this);
         this.vue.getjButtonFermerVisiteur().addActionListener(this);
-//        this.vue.getjButtonPrécédentVisiteur().addActionListener(this);
-//        this.vue.getjButtonSuivantVisiteur().addActionListener(this);
+        this.vue.getjButtonPrécédentVisiteur().addActionListener(this);
+        this.vue.getjButtonSuivantVisiteur().addActionListener(this);
        // préparer l'état iniitial de la vue
 //        rechercherUnVisiteur();
         rechercherTousVisiteur();
@@ -112,23 +112,71 @@ public class CtrlVisiteur implements WindowListener, ActionListener{
         if (e.getSource().equals(vue.getjButtonFermerVisiteur())){
             quitter();
         }
+        if (e.getSource().equals(vue.getjButtonValiderNomVisiteur())){
+            Visiteur visiteurSelectionne = (Visiteur) getVue().getModeleComboBoxVisiteur().getSelectedItem();
+            afficherVisiteur(visiteurSelectionne);
+        }
+        if (e.getSource().equals(vue.getjButtonSuivantVisiteur())){
+            selectionnerVisiteurSuivant();
+        }
+        if (e.getSource().equals(vue.getjButtonPrécédentVisiteur())){
+            selectionnerVisiteurPrecedent();
+        }
     }
 
     private void afficherLesVisiteurs(List<Visiteur> lesVisiteurs) {
-        JComboBox<String> jComboBoxChercherVisiteur = null;
-        String nomPrenom;
         for (Visiteur unVisiteur :  lesVisiteurs){
-            nomPrenom = unVisiteur.getVis_nom() + ' ' + unVisiteur.getVis_prenom();
-            getVue().getModeleComboBoxVisiteur().addElement(nomPrenom);
+            getVue().getModeleComboBoxVisiteur().addElement(unVisiteur);
         }
         String test = getVue().getModeleComboBoxVisiteur().toString();
-        System.out.println(test);
         //VueVisiteurs.setjComboBoxChercherVisiteur(jComboBoxChercherVisiteur);
         
     }
     
     private void quitter(){
         ctrlPrincipal.quitterApplication();
+    }
+    
+    private void afficherVisiteur(Visiteur leVisiteur) {
+        getVue().getjTextFieldNomVisiteur().setText(leVisiteur.getVis_nom());
+        getVue().getjTextFieldPrenomVisiteur().setText(leVisiteur.getVis_prenom());
+        getVue().getjTextFieldAdresseVisiteur().setText(leVisiteur.getVis_adresse());
+        getVue().getjTextFieldCodePostalVisiteur().setText(leVisiteur.getVis_cp());
+        getVue().getjTextFieldVilleVisiteur().setText(leVisiteur.getVis_ville());
+        if(leVisiteur.getSecteur() != null) {
+            getVue().getjTextFieldSecteurVisiteur().setText(leVisiteur.getSecteur().getSec_libelle());
+        }
+        if(leVisiteur.getLaboratoire() != null){
+            getVue().getjTextFieldLaboVisiteur().setText(leVisiteur.getLaboratoire().getLab_nom());
+        }
+    }
+    
+    private void selectionnerVisiteurSuivant() {
+        Visiteur visiteurSuivant;
+        int index;
+        index = getVue().getjComboBoxChercherVisiteur().getSelectedIndex();
+        if(getVue().getjComboBoxChercherVisiteur().getItemCount() == (index + 1)){
+            index = 0;
+        } else {
+            index += 1;
+        }      
+        visiteurSuivant = (Visiteur) getVue().getModeleComboBoxVisiteur().getElementAt(index);
+        getVue().getjComboBoxChercherVisiteur().setSelectedIndex(index);
+        afficherVisiteur(visiteurSuivant);
+    }
+    
+    private void selectionnerVisiteurPrecedent() {
+        Visiteur visiteurPrecedent;
+        int index;
+        index = getVue().getjComboBoxChercherVisiteur().getSelectedIndex();
+        if(index == 0){
+            index = getVue().getjComboBoxChercherVisiteur().getItemCount() - 1;
+        } else {
+            index -= 1;
+        }      
+        visiteurPrecedent = (Visiteur) getVue().getModeleComboBoxVisiteur().getElementAt(index);
+        getVue().getjComboBoxChercherVisiteur().setSelectedIndex(index);
+        afficherVisiteur(visiteurPrecedent);
     }
     
 }
