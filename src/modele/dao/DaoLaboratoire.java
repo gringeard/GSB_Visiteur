@@ -16,6 +16,12 @@ import modele.metier.Laboratoire;
  */
 public class DaoLaboratoire {
     
+    /**
+     * 
+     * @param lab_code
+     * @return
+     * @throws SQLException 
+     */
     public static Laboratoire selectOneById(String lab_code) throws SQLException {
         ResultSet rs;
         PreparedStatement pstmt;
