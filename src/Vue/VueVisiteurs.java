@@ -149,23 +149,23 @@ public class VueVisiteurs extends javax.swing.JFrame {
         getContentPane().add(jButtonValiderNomVisiteur);
         jButtonValiderNomVisiteur.setBounds(227, 57, 53, 25);
         getContentPane().add(jTextFieldNomVisiteur);
-        jTextFieldNomVisiteur.setBounds(77, 109, 132, 19);
+        jTextFieldNomVisiteur.setBounds(77, 109, 210, 19);
         getContentPane().add(jTextFieldPrenomVisiteur);
-        jTextFieldPrenomVisiteur.setBounds(77, 147, 132, 19);
+        jTextFieldPrenomVisiteur.setBounds(77, 147, 210, 19);
         getContentPane().add(jTextFieldAdresseVisiteur);
-        jTextFieldAdresseVisiteur.setBounds(77, 185, 132, 19);
+        jTextFieldAdresseVisiteur.setBounds(77, 185, 210, 19);
         getContentPane().add(jTextFieldCodePostalVisiteur);
-        jTextFieldCodePostalVisiteur.setBounds(77, 223, 35, 19);
+        jTextFieldCodePostalVisiteur.setBounds(67, 223, 50, 19);
         getContentPane().add(jTextFieldSecteurVisiteur);
-        jTextFieldSecteurVisiteur.setBounds(77, 261, 132, 19);
+        jTextFieldSecteurVisiteur.setBounds(77, 261, 210, 19);
         getContentPane().add(jTextFieldLaboVisiteur);
-        jTextFieldLaboVisiteur.setBounds(77, 299, 132, 19);
+        jTextFieldLaboVisiteur.setBounds(77, 299, 210, 19);
 
         jTextFieldBarreVisiteurs.setBackground(new java.awt.Color(51, 51, 153));
         getContentPane().add(jTextFieldBarreVisiteurs);
         jTextFieldBarreVisiteurs.setBounds(10, 91, 277, 7);
         getContentPane().add(jTextFieldVilleVisiteur);
-        jTextFieldVilleVisiteur.setBounds(122, 223, 87, 19);
+        jTextFieldVilleVisiteur.setBounds(122, 223, 160, 19);
 
         jLabelLogoVisiteurs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gsb.png"))); // NOI18N
         getContentPane().add(jLabelLogoVisiteurs);
