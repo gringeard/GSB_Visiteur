@@ -11,11 +11,11 @@ package modele.metier;
  */
 public class TypePraticien {
     
-    private int type_code;
+    private String type_code;
     private String type_libelle;
     private String type_lieu;
 
-    public TypePraticien(int type_code, String type_libelle, String type_lieu) {
+    public TypePraticien(String type_code, String type_libelle, String type_lieu) {
         this.type_code = type_code;
         this.type_libelle = type_libelle;
         this.type_lieu = type_lieu;
@@ -26,11 +26,11 @@ public class TypePraticien {
         return "TypePraticien{" + "type_code=" + type_code + ", type_libelle=" + type_libelle + ", type_lieu=" + type_lieu + '}';
     }
 
-    public int getType_code() {
+    public String getType_code() {
         return type_code;
     }
 
-    public void setType_code(int type_code) {
+    public void setType_code(String type_code) {
         this.type_code = type_code;
     }
 
