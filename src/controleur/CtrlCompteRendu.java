@@ -68,7 +68,7 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
 
     @Override
     public void windowClosing(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ctrlPrincipal.gotoMenu();
     }
 
     @Override
@@ -98,7 +98,13 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (e.getSource().equals(vue.getjButtonCompteRenduFermer())){
+            quitter();
+        }
+    }
+
+    private void quitter() {
+        ctrlPrincipal.gotoMenu();
     }
     
 }
