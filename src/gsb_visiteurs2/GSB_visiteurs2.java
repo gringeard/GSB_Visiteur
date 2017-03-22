@@ -5,8 +5,10 @@
  */
 package gsb_visiteurs2;
 
+import Vue.VueCompteRendu;
 import Vue.VueMenu;
 import Vue.VueVisiteurs;
+import controleur.CtrlCompteRendu;
 import controleur.CtrlMenu;
 import controleur.CtrlPrincipal;
 import controleur.CtrlVisiteur;
@@ -36,10 +38,13 @@ public class GSB_visiteurs2 {
        }
        CtrlPrincipal leControleurPrincipal = new CtrlPrincipal();
        VueVisiteurs laVueVisiteur = new VueVisiteurs();
+       VueCompteRendu laVueCompteRendu = new VueCompteRendu();
        VueMenu laVueMenu = new VueMenu();
        CtrlVisiteur leControleurVisiteur = new CtrlVisiteur(laVueVisiteur, leControleurPrincipal);
+       CtrlCompteRendu leControleurCompteRendu = new CtrlCompteRendu(laVueCompteRendu, leControleurPrincipal);
        CtrlMenu leControleurMenu = new CtrlMenu(laVueMenu, leControleurPrincipal);
        leControleurPrincipal.setCtrlVisiteur(leControleurVisiteur);
+       leControleurPrincipal.setCtrlCompteRendu(leControleurCompteRendu);
        leControleurPrincipal.setCtrlMenu(leControleurMenu);
        
         

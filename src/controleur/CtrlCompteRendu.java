@@ -54,12 +54,15 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
     public VueCompteRendu getVue() {
         return vue;
     }
-
+    
+    
     public void setVue(VueCompteRendu vue) {
         this.vue = vue;
     }
     
-    
+    public CtrlPrincipal getCtrlPrincipal() {
+        return ctrlPrincipal;
+    }
 
     @Override
     public void windowOpened(WindowEvent e) {

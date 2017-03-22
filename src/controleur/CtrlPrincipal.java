@@ -30,11 +30,7 @@ public class CtrlPrincipal {
     public void afficherVisiteur() {
         this.ctrlVisiteur.getVue().setVisible(true);
     }
-
-    /**
-     * fonction permettant de fermer l'application
-     */
-    
+   
     public void afficherMenu() {
         this.ctrlMenu.getVue().setVisible(true);
     }
@@ -55,7 +51,9 @@ public class CtrlPrincipal {
         this.ctrlCompteRendu.getVue().setVisible(false);
     }
    
-    
+    /**
+     * fonction permettant de fermer l'application
+     */
     public void quitterApplication() {
         // Confirmer avant de quitter
         int rep = JOptionPane.showConfirmDialog(null, "Quitter l'application\nEtes-vous sûr(e) ?", "GSB", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -99,6 +97,8 @@ public class CtrlPrincipal {
             cacherCompteRendu();
         }
         afficherMenu();
+        cacherCompteRendu();
+        cacherVisiteur();
     }
 
     /**
@@ -108,6 +108,10 @@ public class CtrlPrincipal {
      */
     public CtrlVisiteur getCtrlVisiteur() {
         return ctrlVisiteur;
+    }
+
+    public CtrlCompteRendu getCtrlCompteRendu() {
+        return ctrlCompteRendu;
     }
     
     public CtrlMenu getCtrlMenu() {
@@ -122,6 +126,10 @@ public class CtrlPrincipal {
     public void setCtrlVisiteur(CtrlVisiteur ctrlVisiteur) {
         this.ctrlVisiteur = ctrlVisiteur;
     } 
+
+    public void setCtrlCompteRendu(CtrlCompteRendu ctrlCompteRendu) {
+        this.ctrlCompteRendu = ctrlCompteRendu;
+    }
     
     public void setCtrlMenu(CtrlMenu ctrlMenu) {
         this.ctrlMenu = ctrlMenu;
