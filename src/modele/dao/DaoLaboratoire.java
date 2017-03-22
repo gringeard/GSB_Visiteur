@@ -40,6 +40,8 @@ public class DaoLaboratoire {
             
             unLaboratoire = new Laboratoire(id, lab_nom, lab_chefvente);
         }
+        pstmt.close();
+        rs.close();
         return unLaboratoire;
     }
     

@@ -44,7 +44,9 @@ public class DaoRapport {
             Praticien pra = DaoPraticien.selectOneById(num_rap);
             Visiteur visit = DaoVisiteur.selectOneById(visit_mat);
             unRapport = new Rapport(visit,num_rap,pra,rap_date,rap_bilan,rap_motif);
-        }
+        }        
+        pstmt.close();
+        rs.close();
         return unRapport;
     }
     
@@ -75,7 +77,27 @@ public class DaoRapport {
             unRapport = new Rapport(visit,num_rap,pra,rap_date,rap_bilan,rap_motif);
             lesRapports.add(unRapport);
         }
+        pstmt.close();
+        rs.close();
         return lesRapports;
     }
+
+    
+    //TO DO
+//        public static int insert(int idAdresse, Adresse uneAdresse) throws SQLException {
+//        int nb;
+//        Jdbc jdbc = Jdbc.getInstance();
+//        String requete;
+//        ResultSet rs;
+//        PreparedStatement pstmt;
+//        requete = "INSERT INTO ADRESSE (ID, RUE, CDP , VILLE) VALUES (?, ?, ?, ?)";
+//        pstmt = jdbc.getConnexion().prepareStatement(requete);
+//        pstmt.setInt(1, idAdresse);
+//        pstmt.setString(2, uneAdresse.getRue());
+//        pstmt.setString(3, uneAdresse.getCp());
+//        pstmt.setString(4, uneAdresse.getVille());
+//        nb = pstmt.executeUpdate();
+//        return nb;
+//    }
     
 }

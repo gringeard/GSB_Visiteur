@@ -39,6 +39,8 @@ public class DaoSecteur {
             
             unSecteur = new Secteur(id, libelle);
         }
+        pstmt.close();
+        rs.close();
         return unSecteur;
     }
     

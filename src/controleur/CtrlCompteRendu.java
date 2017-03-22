@@ -10,6 +10,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.sql.SQLException;
+import java.util.List;
+import javax.swing.JOptionPane;
+import modele.dao.DaoPraticien;
+import modele.dao.DaoVisiteur;
+import modele.metier.Praticien;
+import modele.metier.Visiteur;
 
 /**
  *
@@ -38,19 +45,56 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
         this.vue.getjTextFieldCompteRenduNumeroRapport().addActionListener(this);
         this.vue.getjTextFieldTitreCompteRendu().addActionListener(this);
         // préparer l'état iniitial de la vue
-//        rechercherTousPraticien();
+        rechercherTousVisiteur();
+        rechercherTousPraticien();
+
     }
     
-//    private void rechercherTousPraticien() {
-//        List<Praticien> lesVisiteurs = null;
-//        try {
-//            lesVisiteurs = DaoVisiteur.selectAll();
-//        } catch (SQLException ex) {
-//            JOptionPane.showMessageDialog(getVue(), "CtrlLesVisiteurs - échec de sélection des visiteurs");
-//        }
-//        afficherLesVisiteurs(lesVisiteurs);
-//    }
+    private void rechercherTousPraticien() {
+        List<Praticien> lesPraticiens = null;
+        try {
+            lesPraticiens = DaoPraticien.selectAll();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(getVue(), "CtrlLesVisiteurs - échec de sélection des visiteurs");
+        }
+        afficherLesPraticiens(lesPraticiens);
+    }
+    
+    private void rechercherTousVisiteur() {
+        List<Visiteur> lesVisiteurs2 = null;
+        try {
+            System.out.println("before select all");
+             lesVisiteurs2 = DaoVisiteur.selectAll();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(getVue(), "CtrlLesVisiteurs - échec de sélection des visiteurs");
+        }
+        afficherLesVisiteurs(lesVisiteurs2);
+    }
 
+        /**
+     * fonction permettant d'ajouter les praticiens entrés en paramètre dans la liste déroulante de la vue Praticien
+     * 
+     * @param lesPraticiens 
+     */
+    private void afficherLesPraticiens(List<Praticien> lesPraticiens) {
+        //Pour chaque Praticien, on l'ajoute à la liste déroulante
+        for (Praticien unPraticien :  lesPraticiens){
+            getVue().getModeleComboBoxPraticien().addElement(unPraticien);
+        }
+    }
+    
+        /**
+     * fonction permettant d'ajouter les visiteurs entrés en paramètre dans la liste déroulante de la vue Visiteurs
+     * 
+     * @param lesVisiteurs 
+     */
+    private void afficherLesVisiteurs(List<Visiteur> lesVisiteurs) {
+        //Pour chaque visiteur, on l'ajoute à la liste déroulante
+        for (Visiteur unVisiteur :  lesVisiteurs){
+            getVue().getModeleComboBoxVisiteur().addElement(unVisiteur);
+        }
+    }
+    
     public VueCompteRendu getVue() {
         return vue;
     }
@@ -66,7 +110,7 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
 
     @Override
     public void windowOpened(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -91,12 +135,12 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
 
     @Override
     public void windowActivated(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void windowDeactivated(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -104,10 +148,39 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
         if (e.getSource().equals(vue.getjButtonCompteRenduFermer())){
             quitter();
         }
+        if (e.getSource().equals(vue.getjComboBoxVisiteur())){
+            Visiteur visiteur = (Visiteur) getVue().getjComboBoxVisiteur().getSelectedItem();
+            afficherCompteRendu(visiteur);
+        }
+        if (e.getSource().equals(vue.getjButtonCompteRenduSuivant())){
+            selectionnerCompteRenduSuivant();
+        }
+        if (e.getSource().equals(vue.getjButtonCompteRenduPrécédent())){
+            selectionnerCompteRenduPrecedent();
+        }
     }
 
     private void quitter() {
         ctrlPrincipal.gotoMenu();
+    }
+    
+    /**
+     * fonction qui permet de récupérer le visiteur suivant celui affiché
+     * en le récupérant dans la liste déroulante
+     */
+    private void selectionnerCompteRenduSuivant() {
+//        return null;
+    }
+    
+    /**
+     * idem à la fonction selectionnerVisiteurSuivant() mais en décrémentant l'index
+     */
+    private void selectionnerCompteRenduPrecedent() {
+//        return null;
+    }
+    
+    private void afficherCompteRendu(Visiteur visiteur) {
+        
     }
     
 }

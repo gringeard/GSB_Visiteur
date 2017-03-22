@@ -34,6 +34,8 @@ public class DaoTypePraticien {
             
             unTypePraticien = new TypePraticien(type_praticien_code, type_praticien_libelle, type_praticien_lieu);
         }
+        pstmt.close();
+        rs.close();
         return unTypePraticien;
     }
     

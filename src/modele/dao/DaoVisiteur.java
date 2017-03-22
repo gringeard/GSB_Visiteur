@@ -61,6 +61,8 @@ public class DaoVisiteur {
             Secteur sec = DaoSecteur.selectOneById(secCode);
             unVisiteur = new Visiteur(id, nom, prenom, adresse, cp, ville, dateEmb, sec, labo);
         }
+        pstmt.close();
+        rs.close();
         return unVisiteur;
     }
     
@@ -70,6 +72,7 @@ public class DaoVisiteur {
      * @throws SQLException 
      */
     public static List<Visiteur> selectAll() throws SQLException {
+        System.out.println("Select all");
         List<Visiteur> lesVisiteurs = new ArrayList<Visiteur>();
         Visiteur unVisiteur;
         ResultSet rs;
@@ -94,6 +97,8 @@ public class DaoVisiteur {
             unVisiteur = new Visiteur(id, nom, prenom, adresse, cp, ville, dateEmb, sec, labo);
             lesVisiteurs.add(unVisiteur);
         }
+        pstmt.close();
+        rs.close();
         return lesVisiteurs;
     }
 

@@ -33,7 +33,7 @@ public class Praticien {
 
     @Override
     public String toString() {
-        return "Praticien{" + "pra_num=" + pra_num + ", pra_nom=" + pra_nom + ", pra_prenom=" + pra_prenom + ", pra_adresse=" + pra_adresse + ", pra_cp=" + pra_cp + ", pra_ville=" + pra_ville + ", pra_coefnotoriete=" + pra_coefnotoriete + ", type_code=" + praticien + '}';
+        return pra_nom + " " + pra_prenom;
     }
 
     public int getPra_num() {

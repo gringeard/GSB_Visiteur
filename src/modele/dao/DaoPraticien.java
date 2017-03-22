@@ -47,6 +47,8 @@ public class DaoPraticien {
             
             unPraticien = new Praticien(pra_num,pra_nom,pra_prenom,pra_adresse,pra_cp,pra_ville,pra_coefnotoriete,type_pra);
         }
+        pstmt.close();
+        rs.close();
         return unPraticien;
     }
     
@@ -73,6 +75,8 @@ public class DaoPraticien {
             unPraticien = new Praticien(pra_num,pra_nom,pra_prenom,pra_adresse,pra_cp,pra_ville,pra_coefnotoriete,type_pra);
             lesPraticiens.add(unPraticien);
         }
+        pstmt.close();
+        rs.close();
         return lesPraticiens;
     }
     
