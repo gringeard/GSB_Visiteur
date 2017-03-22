@@ -319,7 +319,7 @@
     <Component class="javax.swing.JLabel" name="jLabelRapportsVisiteLogo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vue/gh,hgfb.png"/>
+          <Image iconType="3" name="/Vue/gsb.png"/>
         </Property>
       </Properties>
       <Constraints>

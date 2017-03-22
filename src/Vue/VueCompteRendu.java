@@ -154,7 +154,7 @@ public class VueCompteRendu extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 310, 70));
 
-        jLabelRapportsVisiteLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gh,hgfb.png"))); // NOI18N
+        jLabelRapportsVisiteLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/gsb.png"))); // NOI18N
         getContentPane().add(jLabelRapportsVisiteLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 410));
 
         pack();

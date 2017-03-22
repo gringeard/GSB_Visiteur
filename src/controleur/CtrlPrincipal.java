@@ -11,6 +11,7 @@ public class CtrlPrincipal {
 
     CtrlVisiteur ctrlVisiteur;
     CtrlMenu ctrlMenu;
+    CtrlCompteRendu ctrlCompteRendu;
 
     /**
      * fonction permettant d'afficher la vue associée au contrôleur Visiteur
@@ -18,18 +19,14 @@ public class CtrlPrincipal {
     public void afficherVisiteur() {
         this.ctrlVisiteur.getVue().setVisible(true);
     }
-
-    /**
-     * fonction permettant de fermer l'application
-     */
-    
+   
     public void afficherMenu() {
         this.ctrlMenu.getVue().setVisible(true);
     }
     
-//    public void afficherCompteRendu() {
-//        this.ctrlCompteRendu.getVue().setVisible(true);
-//    }
+    public void afficherCompteRendu() {
+        this.ctrlCompteRendu.getVue().setVisible(true);
+    }
     
     public void cacherVisiteur() {
         this.ctrlVisiteur.getVue().setVisible(false);
@@ -39,11 +36,13 @@ public class CtrlPrincipal {
         this.ctrlMenu.getVue().setVisible(false);
     }
     
-//    public void cacherCompteRendu() {
-//        this.ctrlCompteRendu.getVue().setVisible(false);
-//    }
+    public void cacherCompteRendu() {
+        this.ctrlCompteRendu.getVue().setVisible(false);
+    }
    
-    
+    /**
+     * fonction permettant de fermer l'application
+     */
     public void quitterApplication() {
         // Confirmer avant de quitter
         int rep = JOptionPane.showConfirmDialog(null, "Quitter l'application\nEtes-vous sûr(e) ?", "GSB", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -55,20 +54,18 @@ public class CtrlPrincipal {
     
     public void gotoVisiteur() {
         cacherMenu();
-//        cacherCompterendu();
         afficherVisiteur();
     }
     
     public void gotoCompterendu() {    
         cacherMenu();
-        cacherVisiteur();
-//        afficherCompterendu();
+        afficherCompteRendu();
     }
     
     public void gotoMenu() {
-        cacherVisiteur();
-//        cacherCompteRendu();
         afficherMenu();
+        cacherCompteRendu();
+        cacherVisiteur();
     }
 
     /**
@@ -78,6 +75,10 @@ public class CtrlPrincipal {
      */
     public CtrlVisiteur getCtrlVisiteur() {
         return ctrlVisiteur;
+    }
+
+    public CtrlCompteRendu getCtrlCompteRendu() {
+        return ctrlCompteRendu;
     }
     
     public CtrlMenu getCtrlMenu() {
@@ -92,6 +93,10 @@ public class CtrlPrincipal {
     public void setCtrlVisiteur(CtrlVisiteur ctrlVisiteur) {
         this.ctrlVisiteur = ctrlVisiteur;
     } 
+
+    public void setCtrlCompteRendu(CtrlCompteRendu ctrlCompteRendu) {
+        this.ctrlCompteRendu = ctrlCompteRendu;
+    }
     
     public void setCtrlMenu(CtrlMenu ctrlMenu) {
         this.ctrlMenu = ctrlMenu;
