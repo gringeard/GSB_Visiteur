@@ -78,4 +78,37 @@ public class DaoRapport {
         return lesRapports;
     }
     
+    /**
+     * 
+     * @param unVisiteur
+     * @return
+     * @throws SQLException 
+     */
+    public static List<Rapport> selectAllByVisiteur(Visiteur unVisiteur) throws SQLException {
+        List<Rapport> lesRapports = new ArrayList<Rapport>();
+        Rapport unRapport;
+        ResultSet rs;
+        PreparedStatement pstmt;
+        Jdbc jdbc = Jdbc.getInstance();
+        // préparer la requête
+        String requete = "SELECT * FROM RAPPORT_VISITE WHERE VIS_MATRICULE = ?";
+        pstmt = jdbc.getConnexion().prepareStatement(requete);
+        String vis_matr = unVisiteur.getVis_matricule();
+        pstmt.setString(1, vis_matr);
+        rs = pstmt.executeQuery();
+        while (rs.next()) {
+            String visit_mat = rs.getString("VIS_MATRICULE");
+            int num_rap = rs.getInt("RAP_NUM");
+            String pra_num = rs.getString("PRA_NUM");
+            Date rap_date = rs.getDate("RAP_DATE");
+            String rap_bilan = rs.getString("RAP_BILAN");
+            String rap_motif = rs.getString("RAP_MOTIF");
+            Praticien pra = DaoPraticien.selectOneById(num_rap);
+            Visiteur visit = DaoVisiteur.selectOneById(visit_mat);
+            unRapport = new Rapport(visit,num_rap,pra,rap_date,rap_bilan,rap_motif);
+            lesRapports.add(unRapport);
+        }
+        return lesRapports;
+    }
+    
 }
