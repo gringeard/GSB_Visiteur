@@ -14,12 +14,12 @@ import javax.swing.JTextField;
  *
  * @author latatiasteph
  */
-public class RapportsVisite extends javax.swing.JFrame {
+public class VueCompteRendu extends javax.swing.JFrame {
 
     /**
      * Creates new form RapportsVisite
      */
-    public RapportsVisite() {
+    public VueCompteRendu() {
         initComponents();
         this.setSize(625, 430);
         this.setLocationRelativeTo(null);
@@ -41,16 +41,16 @@ public class RapportsVisite extends javax.swing.JFrame {
         jLabelRapportsVisiteDateRapport = new javax.swing.JLabel();
         jLabelRapportsVisiteMotifVisite = new javax.swing.JLabel();
         jLabelRapportsVisiteBilan = new javax.swing.JLabel();
-        jComboBoxRapportsVisitePraticien = new javax.swing.JComboBox<String>();
-        jButtonRapportsVisiteDetails = new javax.swing.JButton();
-        jTextFieldRapportsVisiteDateRapport = new javax.swing.JTextField();
-        jTextFieldRapportsVisiteMotifVisite = new javax.swing.JTextField();
-        jTextFieldRapportsVisiteBilan = new javax.swing.JTextField();
-        jButtonRapportsVisitePrécédent = new javax.swing.JButton();
-        jButtonRapportsVisiteSuivant = new javax.swing.JButton();
-        jButtonRapportsVisiteNouveau = new javax.swing.JButton();
-        jTextFieldRapportsVisiteNumeroRapport = new javax.swing.JTextField();
-        jButtonRapportsVisiteFermer = new javax.swing.JButton();
+        jComboBoxCompteRenduPraticien = new javax.swing.JComboBox<String>();
+        jButtonCompteRenduDetails = new javax.swing.JButton();
+        jTextFieldCompteRenduDateRapport = new javax.swing.JTextField();
+        jTextFieldCompteRenduMotifVisite = new javax.swing.JTextField();
+        jTextFieldCompteRenduBilan = new javax.swing.JTextField();
+        jButtonCompteRenduPrécédent = new javax.swing.JButton();
+        jButtonCompteRenduSuivant = new javax.swing.JButton();
+        jButtonCompteRenduNouveau = new javax.swing.JButton();
+        jTextFieldCompteRenduNumeroRapport = new javax.swing.JTextField();
+        jButtonCompteRenduFermer = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jLabelRapportsVisiteLogo = new javax.swing.JLabel();
@@ -92,41 +92,41 @@ public class RapportsVisite extends javax.swing.JFrame {
         jLabelRapportsVisiteBilan.setText("BILAN");
         getContentPane().add(jLabelRapportsVisiteBilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
-        jComboBoxRapportsVisitePraticien.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBoxRapportsVisitePraticien, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 77, 150, -1));
+        jComboBoxCompteRenduPraticien.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBoxCompteRenduPraticien, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 77, 150, -1));
 
-        jButtonRapportsVisiteDetails.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonRapportsVisiteDetails.setForeground(new java.awt.Color(51, 51, 153));
-        jButtonRapportsVisiteDetails.setText("Détails");
-        getContentPane().add(jButtonRapportsVisiteDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 77, -1, -1));
-        getContentPane().add(jTextFieldRapportsVisiteDateRapport, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 116, 75, -1));
-        getContentPane().add(jTextFieldRapportsVisiteMotifVisite, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 150, 150, -1));
-        getContentPane().add(jTextFieldRapportsVisiteBilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 193, 174, 83));
+        jButtonCompteRenduDetails.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jButtonCompteRenduDetails.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonCompteRenduDetails.setText("Détails");
+        getContentPane().add(jButtonCompteRenduDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 77, -1, -1));
+        getContentPane().add(jTextFieldCompteRenduDateRapport, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 116, 75, -1));
+        getContentPane().add(jTextFieldCompteRenduMotifVisite, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 150, 150, -1));
+        getContentPane().add(jTextFieldCompteRenduBilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 193, 174, 83));
 
-        jButtonRapportsVisitePrécédent.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonRapportsVisitePrécédent.setForeground(new java.awt.Color(51, 51, 153));
-        jButtonRapportsVisitePrécédent.setText("Précédent");
-        getContentPane().add(jButtonRapportsVisitePrécédent, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
+        jButtonCompteRenduPrécédent.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonCompteRenduPrécédent.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonCompteRenduPrécédent.setText("Précédent");
+        getContentPane().add(jButtonCompteRenduPrécédent, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
 
-        jButtonRapportsVisiteSuivant.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonRapportsVisiteSuivant.setForeground(new java.awt.Color(51, 51, 153));
-        jButtonRapportsVisiteSuivant.setText("Suivant");
-        getContentPane().add(jButtonRapportsVisiteSuivant, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, -1));
+        jButtonCompteRenduSuivant.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonCompteRenduSuivant.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonCompteRenduSuivant.setText("Suivant");
+        getContentPane().add(jButtonCompteRenduSuivant, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, -1));
 
-        jButtonRapportsVisiteNouveau.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonRapportsVisiteNouveau.setForeground(new java.awt.Color(51, 51, 153));
-        jButtonRapportsVisiteNouveau.setText("Nouveau");
-        getContentPane().add(jButtonRapportsVisiteNouveau, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
+        jButtonCompteRenduNouveau.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonCompteRenduNouveau.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonCompteRenduNouveau.setText("Nouveau");
+        getContentPane().add(jButtonCompteRenduNouveau, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
 
-        jTextFieldRapportsVisiteNumeroRapport.setEditable(false);
-        jTextFieldRapportsVisiteNumeroRapport.setForeground(new java.awt.Color(160, 160, 160));
-        jTextFieldRapportsVisiteNumeroRapport.setText("(NuméroAuto)");
-        getContentPane().add(jTextFieldRapportsVisiteNumeroRapport, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
+        jTextFieldCompteRenduNumeroRapport.setEditable(false);
+        jTextFieldCompteRenduNumeroRapport.setForeground(new java.awt.Color(160, 160, 160));
+        jTextFieldCompteRenduNumeroRapport.setText("(NuméroAuto)");
+        getContentPane().add(jTextFieldCompteRenduNumeroRapport, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
 
-        jButtonRapportsVisiteFermer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonRapportsVisiteFermer.setForeground(new java.awt.Color(51, 51, 153));
-        jButtonRapportsVisiteFermer.setText("Fermer");
-        getContentPane().add(jButtonRapportsVisiteFermer, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, -1, -1));
+        jButtonCompteRenduFermer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonCompteRenduFermer.setForeground(new java.awt.Color(51, 51, 153));
+        jButtonCompteRenduFermer.setText("Fermer");
+        getContentPane().add(jButtonCompteRenduFermer, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -146,6 +146,7 @@ public class RapportsVisite extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTable2.setEnabled(false);
         jScrollPane2.setViewportView(jTable2);
         if (jTable2.getColumnModel().getColumnCount() > 0) {
             jTable2.getColumnModel().getColumn(0).setCellEditor(new DefaultCellEditor(jComboBoxTableau));
@@ -176,77 +177,78 @@ public class RapportsVisite extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RapportsVisite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VueCompteRendu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RapportsVisite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VueCompteRendu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RapportsVisite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VueCompteRendu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RapportsVisite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VueCompteRendu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RapportsVisite().setVisible(true);
+                new VueCompteRendu().setVisible(true);
             }
         });
     }
 
-    public JButton getjButtonRapportsVisiteDetails() {
-        return jButtonRapportsVisiteDetails;
+    public JButton getjButtonCompteRenduDetails() {
+        return jButtonCompteRenduDetails;
     }
 
-    public JButton getjButtonRapportsVisiteFermer() {
-        return jButtonRapportsVisiteFermer;
+    public JButton getjButtonCompteRenduFermer() {
+        return jButtonCompteRenduFermer;
     }
 
-    public JButton getjButtonRapportsVisiteNouveau() {
-        return jButtonRapportsVisiteNouveau;
+    public JButton getjButtonCompteRenduNouveau() {
+        return jButtonCompteRenduNouveau;
     }
 
-    public JButton getjButtonRapportsVisitePrécédent() {
-        return jButtonRapportsVisitePrécédent;
+    public JButton getjButtonCompteRenduPrécédent() {
+        return jButtonCompteRenduPrécédent;
     }
 
-    public JButton getjButtonRapportsVisiteSuivant() {
-        return jButtonRapportsVisiteSuivant;
+    public JButton getjButtonCompteRenduSuivant() {
+        return jButtonCompteRenduSuivant;
     }
 
-    public JComboBox<String> getjComboBoxRapportsVisitePraticien() {
-        return jComboBoxRapportsVisitePraticien;
+    public JComboBox<String> getjComboBoxCompteRenduPraticien() {
+        return jComboBoxCompteRenduPraticien;
     }
 
-    public JTextField getjTextFieldRapportsVisiteBilan() {
-        return jTextFieldRapportsVisiteBilan;
+    public JTextField getjTextFieldCompteRenduBilan() {
+        return jTextFieldCompteRenduBilan;
     }
 
-    public JTextField getjTextFieldRapportsVisiteDateRapport() {
-        return jTextFieldRapportsVisiteDateRapport;
+    public JTextField getjTextFieldCompteRenduDateRapport() {
+        return jTextFieldCompteRenduDateRapport;
     }
 
-    public JTextField getjTextFieldRapportsVisiteMotifVisite() {
-        return jTextFieldRapportsVisiteMotifVisite;
+    public JTextField getjTextFieldCompteRenduMotifVisite() {
+        return jTextFieldCompteRenduMotifVisite;
     }
 
-    public JTextField getjTextFieldRapportsVisiteNumeroRapport() {
-        return jTextFieldRapportsVisiteNumeroRapport;
+    public JTextField getjTextFieldCompteRenduNumeroRapport() {
+        return jTextFieldCompteRenduNumeroRapport;
     }
 
-    public JTextField getjTextFieldTitreRapportVisite() {
+    public JTextField getjTextFieldTitreCompteRendu() {
         return jTextFieldTitreRapportVisite;
     }
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonRapportsVisiteDetails;
-    private javax.swing.JButton jButtonRapportsVisiteFermer;
-    private javax.swing.JButton jButtonRapportsVisiteNouveau;
-    private javax.swing.JButton jButtonRapportsVisitePrécédent;
-    private javax.swing.JButton jButtonRapportsVisiteSuivant;
-    private javax.swing.JComboBox<String> jComboBoxRapportsVisitePraticien;
+    private javax.swing.JButton jButtonCompteRenduDetails;
+    private javax.swing.JButton jButtonCompteRenduFermer;
+    private javax.swing.JButton jButtonCompteRenduNouveau;
+    private javax.swing.JButton jButtonCompteRenduPrécédent;
+    private javax.swing.JButton jButtonCompteRenduSuivant;
+    private javax.swing.JComboBox<String> jComboBoxCompteRenduPraticien;
     private javax.swing.JComboBox jComboBoxTableau;
     private javax.swing.JLabel jLabelRapportsVisiteBilan;
     private javax.swing.JLabel jLabelRapportsVisiteDateRapport;
@@ -256,10 +258,10 @@ public class RapportsVisite extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelRapportsVisitePraticien;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextFieldRapportsVisiteBilan;
-    private javax.swing.JTextField jTextFieldRapportsVisiteDateRapport;
-    private javax.swing.JTextField jTextFieldRapportsVisiteMotifVisite;
-    private javax.swing.JTextField jTextFieldRapportsVisiteNumeroRapport;
+    private javax.swing.JTextField jTextFieldCompteRenduBilan;
+    private javax.swing.JTextField jTextFieldCompteRenduDateRapport;
+    private javax.swing.JTextField jTextFieldCompteRenduMotifVisite;
+    private javax.swing.JTextField jTextFieldCompteRenduNumeroRapport;
     private javax.swing.JTextField jTextFieldTitreRapportVisite;
     // End of variables declaration//GEN-END:variables
 }
