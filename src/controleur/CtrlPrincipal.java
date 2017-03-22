@@ -1,13 +1,28 @@
 package controleur;
 
-import Vue.VueVisiteurs;
 import javax.swing.JOptionPane;
 
 public class CtrlPrincipal {
 
     CtrlVisiteur ctrlVisiteur;
     CtrlMenu ctrlMenu;
+    CtrlCompteRendu ctrlCompteRendu;
 
+    public boolean isMenuVisible(){
+        boolean visible = this.ctrlMenu.getVue().isVisible();
+        return visible;
+    }
+    
+    public boolean isCompteRenduVisible(){
+        boolean visible = this.ctrlCompteRendu.getVue().isVisible();
+        return visible;
+    }
+    
+    public boolean isVisiteurVisible(){
+        boolean visible = this.ctrlVisiteur.getVue().isVisible();
+        return visible;
+    }
+    
     public void afficherVisiteur() {
         this.ctrlVisiteur.getVue().setVisible(true);
     }
@@ -16,9 +31,9 @@ public class CtrlPrincipal {
         this.ctrlMenu.getVue().setVisible(true);
     }
     
-//    public void afficherCompteRendu() {
-//        this.ctrlCompteRendu.getVue().setVisible(true);
-//    }
+    public void afficherCompteRendu() {
+        this.ctrlCompteRendu.getVue().setVisible(true);
+    }
     
     public void cacherVisiteur() {
         this.ctrlVisiteur.getVue().setVisible(false);
@@ -28,9 +43,9 @@ public class CtrlPrincipal {
         this.ctrlMenu.getVue().setVisible(false);
     }
     
-//    public void cacherCompteRendu() {
-//        this.ctrlCompteRendu.getVue().setVisible(false);
-//    }
+    public void cacherCompteRendu() {
+        this.ctrlCompteRendu.getVue().setVisible(false);
+    }
    
     
     public void quitterApplication() {
@@ -43,22 +58,41 @@ public class CtrlPrincipal {
     }
     
     public void gotoVisiteur() {
-        cacherMenu();
-//        cacherCompterendu();
+        boolean visibility_menu = isMenuVisible();
+        boolean visibility_compte_rendu = isCompteRenduVisible();
+        if (visibility_menu == true){
+            cacherMenu();
+        }
+        if (visibility_compte_rendu == true){
+            cacherCompteRendu();
+        }
         afficherVisiteur();
     }
     
     public void gotoCompterendu() {    
-        cacherMenu();
-        cacherVisiteur();
-//        afficherCompterendu();
+        boolean visibility_menu = isMenuVisible();
+        boolean visibility_visiteur = isVisiteurVisible();
+        if (visibility_menu == true){
+            cacherMenu();
+        }
+        if (visibility_visiteur == true){
+            cacherVisiteur();
+        }
+        afficherCompteRendu();
     }
     
-    public void gotoMenu() {
-        cacherVisiteur();
-//        cacherCompteRendu();
+    public void gotoMenu() {    
+        boolean visibility_visiteur = isVisiteurVisible();
+        boolean visibility_compte_rendu = isCompteRenduVisible();
+        if (visibility_visiteur == true){
+            cacherVisiteur();
+        }
+        if (visibility_compte_rendu == true){
+            cacherCompteRendu();
+        }
         afficherMenu();
     }
+
 
     public CtrlVisiteur getCtrlVisiteur() {
         return ctrlVisiteur;

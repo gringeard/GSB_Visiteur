@@ -51,6 +51,16 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
 //        afficherLesVisiteurs(lesVisiteurs);
 //    }
 
+    public VueCompteRendu getVue() {
+        return vue;
+    }
+
+    public void setVue(VueCompteRendu vue) {
+        this.vue = vue;
+    }
+    
+    
+
     @Override
     public void windowOpened(WindowEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
