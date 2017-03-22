@@ -11,11 +11,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import modele.dao.DaoPraticien;
+import modele.dao.DaoRapport;
 import modele.dao.DaoVisiteur;
 import modele.metier.Praticien;
+import modele.metier.Rapport;
 import modele.metier.Visiteur;
 
 /**
@@ -24,6 +29,7 @@ import modele.metier.Visiteur;
  */
 public class CtrlCompteRendu implements WindowListener, ActionListener{
     
+    public static int index_compte_rendu;
     private VueCompteRendu vue; // LA VUE
     private CtrlPrincipal ctrlPrincipal;
     
@@ -45,6 +51,7 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
         this.vue.getjTextFieldCompteRenduNumeroRapport().addActionListener(this);
         this.vue.getjTextFieldTitreCompteRendu().addActionListener(this);
         // préparer l'état iniitial de la vue
+        index_compte_rendu = 0;
         rechercherTousVisiteur();
         rechercherTousPraticien();
 
@@ -149,38 +156,64 @@ public class CtrlCompteRendu implements WindowListener, ActionListener{
             quitter();
         }
         if (e.getSource().equals(vue.getjComboBoxVisiteur())){
-            Visiteur visiteur = (Visiteur) getVue().getjComboBoxVisiteur().getSelectedItem();
-            afficherCompteRendu(visiteur);
+            Visiteur visiteur = (Visiteur) getVue().getModeleComboBoxVisiteur().getSelectedItem();
+            try {
+                afficherCompteRendu(visiteur);
+            } catch (SQLException ex) {
+                Logger.getLogger(CtrlCompteRendu.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (e.getSource().equals(vue.getjButtonCompteRenduSuivant())){
-            selectionnerCompteRenduSuivant();
+            Visiteur visiteur = (Visiteur) getVue().getModeleComboBoxVisiteur().getSelectedItem();
+            try {
+                compteRenduSuivant(visiteur);
+            } catch (SQLException ex) {
+                Logger.getLogger(CtrlCompteRendu.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (e.getSource().equals(vue.getjButtonCompteRenduPrécédent())){
-            selectionnerCompteRenduPrecedent();
+            Visiteur visiteur = (Visiteur) getVue().getModeleComboBoxVisiteur().getSelectedItem();
+            try {
+                compteRenduPrecedant(visiteur);
+            } catch (SQLException ex) {
+                Logger.getLogger(CtrlCompteRendu.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 
     private void quitter() {
         ctrlPrincipal.gotoMenu();
     }
+     
     
-    /**
-     * fonction qui permet de récupérer le visiteur suivant celui affiché
-     * en le récupérant dans la liste déroulante
-     */
-    private void selectionnerCompteRenduSuivant() {
-//        return null;
+    private void afficherCompteRendu(Visiteur visiteur) throws SQLException {
+        List<Rapport> rapport_list = DaoRapport.selectAllByVisiteur(visiteur);
+        int rapport_list_size = rapport_list.size();
+        if (index_compte_rendu > (rapport_list_size - 1)){
+            index_compte_rendu -= 1;
+        }
+        else if (index_compte_rendu < 0){
+            index_compte_rendu += 1;
+        }
+        Rapport le_rapport = rapport_list.get(index_compte_rendu);
+        System.out.println(le_rapport.getRap_bilan());
+        Praticien le_praticien = le_rapport.getPra_num();
+        System.out.println(le_praticien);
+        getVue().getModeleComboBoxPraticien().setSelectedItem(le_praticien);
+        String str_date = le_rapport.getRap_date().toString();
+        getVue().getjTextFieldCompteRenduDateRapport().setText(str_date);
+        getVue().getjTextFieldCompteRenduMotifVisite().setText(le_rapport.getRap_motif());
+        getVue().getjTextFieldCompteRenduBilan().setText(le_rapport.getRap_bilan());
     }
     
-    /**
-     * idem à la fonction selectionnerVisiteurSuivant() mais en décrémentant l'index
-     */
-    private void selectionnerCompteRenduPrecedent() {
-//        return null;
+    private void compteRenduSuivant(Visiteur visiteur) throws SQLException{
+        index_compte_rendu += 1;
+        afficherCompteRendu(visiteur);
     }
     
-    private void afficherCompteRendu(Visiteur visiteur) {
-        
+    private void compteRenduPrecedant(Visiteur visiteur) throws SQLException{
+        index_compte_rendu -= 1;
+        afficherCompteRendu(visiteur);
     }
     
 }

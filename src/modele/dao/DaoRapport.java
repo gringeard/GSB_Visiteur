@@ -121,11 +121,11 @@ public class DaoRapport {
         while (rs.next()) {
             String visit_mat = rs.getString("VIS_MATRICULE");
             int num_rap = rs.getInt("RAP_NUM");
-            String pra_num = rs.getString("PRA_NUM");
+            int pra_num = rs.getInt("PRA_NUM");
             Date rap_date = rs.getDate("RAP_DATE");
             String rap_bilan = rs.getString("RAP_BILAN");
             String rap_motif = rs.getString("RAP_MOTIF");
-            Praticien pra = DaoPraticien.selectOneById(num_rap);
+            Praticien pra = DaoPraticien.selectOneById(pra_num);
             Visiteur visit = DaoVisiteur.selectOneById(visit_mat);
             unRapport = new Rapport(visit,num_rap,pra,rap_date,rap_bilan,rap_motif);
             lesRapports.add(unRapport);
