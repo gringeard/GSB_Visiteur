@@ -41,7 +41,7 @@ public class testDaoSecteur {
     
     private static void test1_GetOneSecteur() throws SQLException {
         Secteur test;
-        String id_secteur = "SW";
+        String id_secteur = "S";
         test = DaoSecteur.selectOneById(id_secteur);
         System.out.println("test");
         System.out.println(test);

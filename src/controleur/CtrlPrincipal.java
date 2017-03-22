@@ -2,6 +2,10 @@ package controleur;
 
 import javax.swing.JOptionPane;
 
+/**
+ * 
+ * @author btssio
+ */
 public class CtrlPrincipal {
 
     CtrlVisiteur ctrlVisiteur;
@@ -26,6 +30,10 @@ public class CtrlPrincipal {
     public void afficherVisiteur() {
         this.ctrlVisiteur.getVue().setVisible(true);
     }
+
+    /**
+     * fonction permettant de fermer l'application
+     */
     
     public void afficherMenu() {
         this.ctrlMenu.getVue().setVisible(true);
@@ -93,7 +101,11 @@ public class CtrlPrincipal {
         afficherMenu();
     }
 
-
+    /**
+     * fonction permettant de retourner le contrôleur Visiteur
+     * 
+     * @return 
+     */
     public CtrlVisiteur getCtrlVisiteur() {
         return ctrlVisiteur;
     }
@@ -102,6 +114,11 @@ public class CtrlPrincipal {
         return ctrlMenu;
     }
 
+    /**
+     * fonction permettant de modifier le contrôleur Visiteur
+     * 
+     * @param ctrlVisiteur 
+     */
     public void setCtrlVisiteur(CtrlVisiteur ctrlVisiteur) {
         this.ctrlVisiteur = ctrlVisiteur;
     } 
