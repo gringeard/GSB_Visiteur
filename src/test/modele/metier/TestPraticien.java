@@ -28,9 +28,10 @@ public class TestPraticien {
         System.out.println("\nTest n°1 : instanciation et accesseurs");
         type_pra = new TypePraticien("MT","Medecin Test","Lieu Test");
         float coef = (float) 1.666;
-        pra = new Praticien(1 , "Pra_nom", "Pra-prenom", "8 cours Test", "00000", "TEST",coef,type_pra);
+        pra = new Praticien(1 , "Pra_nom", "Pra_prenom", "8 cours Test", "00000", "TEST",coef,type_pra);
         System.out.println("Nouveau visiteur : "+pra);
         System.out.println("\nTest n°2 : mutateurs");
+        pra.setPra_nom("nouveau_nom");
         pra.setPra_ville("TestVille");
         pra.setPra_cp("44000");
         System.out.println("Visiteur modifié : "+pra);

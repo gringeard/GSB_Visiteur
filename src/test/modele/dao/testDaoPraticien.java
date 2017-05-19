@@ -52,7 +52,7 @@ public class testDaoPraticien {
     
     private static void test2_GetAll() throws SQLException {
         List<Praticien> desPraticiens = DaoPraticien.selectAll();
-        System.out.println("Les visiteurs lus : "+desPraticiens.toString());
+        System.out.println("Les praticiens lus : "+desPraticiens.toString());
     }
     
     

@@ -72,7 +72,6 @@ public class DaoVisiteur {
      * @throws SQLException 
      */
     public static List<Visiteur> selectAll() throws SQLException {
-        System.out.println("Select all");
         List<Visiteur> lesVisiteurs = new ArrayList<Visiteur>();
         Visiteur unVisiteur;
         ResultSet rs;

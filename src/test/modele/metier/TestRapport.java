@@ -42,10 +42,9 @@ public class TestRapport {
         rapport = new Rapport(visit,666,pra,date,"Bilan de test","C'est un test");
         System.out.println("Nouveau rapport : "+rapport);
         System.out.println("\nTest n°2 : mutateurs");
-        visit.setVis_adresse("56 boulevard de la Prairie aux Ducs");
-        visit.setVis_cp("44000");
-        visit.setVis_ville("Nantes");
-        System.out.println("Visiteur modifié : "+rapport);
+        rapport.setRap_bilan("nouveau bilan");
+        rapport.setRap_motif("nouveau motif");
+        System.out.println("rapport modifié : "+rapport);
         System.out.println("\nTest n°3 : Visiteur semblable à un visiteur 'null'");
         rapport1 = new Rapport(null, 0, null, null, null,null);
         System.out.println("Sont ils semblables ? " + rapport1.equals(rapport));

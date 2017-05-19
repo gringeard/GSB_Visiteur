@@ -28,7 +28,9 @@ public class GSB_visiteurs2 {
      */
     public static void main(String[] args) {
        
-       Jdbc.creer("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:", "@localhost:1521:XE", "", "gsb", "gsb");
+       //Jdbc.creer("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:", "@localhost:1521:XE", "", "gsb", "gsb");
+       //Jdbc.creer("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:", "@172.15.11.102:1521:ORCL", "", "ora_2slamppe_eq2", "equipe02");
+       Jdbc.creer("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:", "@172.15.11.102:1521:ORCL", "", "gringeard", "gringeard");
        try {
            Jdbc.getInstance().connecter();
        } catch (ClassNotFoundException ex) {

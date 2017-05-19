@@ -8,6 +8,7 @@ package modele.dao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -50,6 +51,24 @@ public class DaoRapport {
         return unRapport;
     }
     
+    public static int selectMaxId() throws SQLException {
+        ResultSet rs;
+        Statement stmt;
+        Jdbc jdbc = Jdbc.getInstance();
+        
+        // préparer la requête
+        String requete = "SELECT MAX(rap_num) AS maxi FROM RAPPORT_VISITE";
+        stmt = jdbc.getConnexion().createStatement();
+        rs = stmt.executeQuery(requete);
+        int result = 0;
+        if (rs.next()) {
+            result = rs.getInt("maxi");
+        }        
+        stmt.close();
+        rs.close();
+        return result;
+    }
+    
     /**
      * 
      * @return
@@ -81,24 +100,6 @@ public class DaoRapport {
         rs.close();
         return lesRapports;
     }
-
-    
-    //TO DO
-//        public static int insert(int idAdresse, Adresse uneAdresse) throws SQLException {
-//        int nb;
-//        Jdbc jdbc = Jdbc.getInstance();
-//        String requete;
-//        ResultSet rs;
-//        PreparedStatement pstmt;
-//        requete = "INSERT INTO ADRESSE (ID, RUE, CDP , VILLE) VALUES (?, ?, ?, ?)";
-//        pstmt = jdbc.getConnexion().prepareStatement(requete);
-//        pstmt.setInt(1, idAdresse);
-//        pstmt.setString(2, uneAdresse.getRue());
-//        pstmt.setString(3, uneAdresse.getCp());
-//        pstmt.setString(4, uneAdresse.getVille());
-//        nb = pstmt.executeUpdate();
-//        return nb;
-//    }
     
     /**
      * 
@@ -131,6 +132,24 @@ public class DaoRapport {
             lesRapports.add(unRapport);
         }
         return lesRapports;
+    }
+    
+    public static int insert(Rapport unRapport) throws SQLException {
+        int nb;
+        Jdbc jdbc = Jdbc.getInstance();
+        String requete;
+        ResultSet rs;
+        PreparedStatement pstmt;
+        requete = "INSERT INTO RAPPORT_VISITE (VIS_MATRICULE, RAP_NUM, PRA_NUM, RAP_DATE, RAP_BILAN, RAP_MOTIF) VALUES (?, ?, ?, ?, ?, ?)";
+        pstmt = jdbc.getConnexion().prepareStatement(requete);
+        pstmt.setString(1, unRapport.getVisiteur().getVis_matricule());
+        pstmt.setInt(2, unRapport.getRap_num());
+        pstmt.setInt(3, unRapport.getPra_num().getPra_num());
+        pstmt.setDate(4, new java.sql.Date(unRapport.getRap_date().getTime()));
+        pstmt.setString(5, unRapport.getRap_bilan());
+        pstmt.setString(6, unRapport.getRap_motif());
+        nb = pstmt.executeUpdate();
+        return nb;
     }
     
 }
